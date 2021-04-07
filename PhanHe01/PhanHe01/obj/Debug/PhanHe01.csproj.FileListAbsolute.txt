@@ -1,0 +1,15 @@
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\bin\Debug\PhanHe01.exe.config
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\bin\Debug\PhanHe01.exe
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\bin\Debug\PhanHe01.pdb
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.csprojAssemblyReference.cache
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\MainWindow.g.cs
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\App.g.cs
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01_MarkupCompile.cache
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01_MarkupCompile.lref
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\MainWindow.baml
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.g.resources
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.Properties.Resources.resources
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.csproj.GenerateResource.cache
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.csproj.CoreCompileInputs.cache
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.exe
+F:\Study\An toan bao mat HTTT\PhanHe01\PhanHe01\obj\Debug\PhanHe01.pdb
