@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,30 @@ namespace PhanHe01.UserPages
         public AddUserPage()
         {
             InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            String username = UsernameTextBox.Text.ToUpper();
+            String password = PasswordTextBox.Text.ToUpper();
+
+            if(password.Trim().Equals(""))
+            {
+                MessageBox.Show("Password Require!");
+                return;
+            }
+
+            try
+            {
+                BUS_User.Instance.CreateUser(username, password);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            
+            MessageBox.Show($"{username} created successfully!");
+
         }
     }
 }

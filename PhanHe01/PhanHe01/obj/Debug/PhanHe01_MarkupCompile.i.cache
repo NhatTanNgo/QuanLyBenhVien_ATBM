@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\App.xaml
-11-1830449396
+12-274940015
 
-16-602353858
+17-1902486567
 17-1154264746
-MainWindow.xaml;ManagePrivilegePage.xaml;ManageUserPage.xaml;PrivilegePages\GrantPrivilegePage.xaml;UserPages\AddRolePage.xaml;UserPages\AddUserPage.xaml;UserPages\DeleteRolePage.xaml;UserPages\DeleteUserPage.xaml;UserPages\ShowPrivilegePage.xaml;UserPages\ShowUsersPage.xaml;UserPages\UpdateUserPage.xaml;
+MainWindow.xaml;ManagePrivilegePage.xaml;ManageUserPage.xaml;PrivilegePages\GrantPrivilegePage.xaml;PrivilegePages\GrantRoleToUserPage.xaml;UserPages\AddRolePage.xaml;UserPages\AddUserPage.xaml;UserPages\DeleteRolePage.xaml;UserPages\DeleteUserPage.xaml;UserPages\ShowPrivilegePage.xaml;UserPages\ShowUsersPage.xaml;UserPages\UpdateUserPage.xaml;
 
-False
+True
 

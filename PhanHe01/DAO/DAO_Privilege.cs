@@ -47,5 +47,30 @@ namespace DAO
             return dataTable;
         }
         
+        public void RevokeAllPrivileges(String username, String table)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"REVOKE ALL PRIVILEGES ON {table} FROM {username}";
+            command.Connection = _conn;
+            _conn.Open();
+            command.ExecuteNonQuery();
+            _conn.Close();
+        }
+
+        public void GrantPrivilegesOnTable(String username, String privileges, String table, bool grantable)
+        {
+            String grantableStr = "";
+            if(grantable)
+            {
+                grantableStr = "WITH GRANT OPTION";
+            }
+
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"GRANT {privileges} ON {table} TO {username} {grantableStr}";
+            command.Connection = _conn;
+            _conn.Open();
+            command.ExecuteNonQuery();
+            _conn.Close();
+        }
     }
 }

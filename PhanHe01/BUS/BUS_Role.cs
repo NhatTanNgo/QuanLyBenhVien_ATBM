@@ -57,5 +57,35 @@ namespace BUS
             return false;
 
         }
+
+        public void GrantRoleToUser(String role, String username)
+        {
+            DAO_Role.Instance.GrantRoleToUser(role, username);
+        }
+
+        public void CreateRole(String rolename, String password)
+        {
+            try
+            {
+                DAO_Role.Instance.CreateRole(rolename, password);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void DeleteRole(String rolename)
+        {
+            try
+            {
+                DAO_Role.Instance.DeleteRole(rolename);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

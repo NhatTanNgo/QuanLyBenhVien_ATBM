@@ -61,6 +61,9 @@
     <Compile Include="PrivilegePages\GrantPrivilegePage.xaml.cs">
       <DependentUpon>GrantPrivilegePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PrivilegePages\GrantRoleToUserPage.xaml.cs">
+      <DependentUpon>GrantRoleToUserPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserPages\AddRolePage.xaml.cs">
       <DependentUpon>AddRolePage.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PrivilegePages\GrantPrivilegePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrivilegePages\GrantRoleToUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

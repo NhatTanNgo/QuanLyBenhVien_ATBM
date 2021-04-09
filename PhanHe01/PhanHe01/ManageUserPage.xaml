@@ -47,11 +47,6 @@
                     Content="Thêm Role"
                     Margin="0 5"
                     HorizontalAlignment="Stretch"/>
-            <Button x:Name="UpdateRoleButton" 
-                    Click="UpdateRoleButton_Click"
-                    Content="Sửa Role"
-                    Margin="0 5"
-                    HorizontalAlignment="Stretch"/>
             <Button x:Name="DeleteRoleButton"
                     Click="DeleteRoleButton_Click"
                     Content="Xóa Role"

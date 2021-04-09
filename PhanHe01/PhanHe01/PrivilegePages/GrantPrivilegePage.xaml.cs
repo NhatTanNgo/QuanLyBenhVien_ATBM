@@ -28,7 +28,7 @@ namespace PhanHe01.PrivilegePages
             InitializeComponent();
         }
 
-        private ObservableCollection<DTO_PrivilegeOnTable> myList = null;
+        private ObservableCollection<DTO_PrivilegeOnTable> privilegesOnTableList = null;
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
@@ -36,20 +36,20 @@ namespace PhanHe01.PrivilegePages
             if(!checkExistUser)
             {
                 bool checkExistRole = BUS_Role.Instance.CheckRole(UsernameTextBox.Text);
-                if(!checkExistUser)
+                if(!checkExistRole)
                 {
                     MessageBox.Show("KHÔNG TÌM THẤY USER/ROLE NÀY!", "Oops");
                     return;
                 }
             }
             PrivilegeTableStackPanel.Visibility = Visibility;
-            myList = BUS_Privilege.Instance.GetPrivilegesOnTable(UsernameTextBox.Text);
-            PrivilegeOnTable_DataGrid.ItemsSource = myList;
+            privilegesOnTableList = BUS_Privilege.Instance.GetPrivilegesAllTables(UsernameTextBox.Text);
+            PrivilegeOnTable_DataGrid.ItemsSource = privilegesOnTableList;
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, null, UsernameTextBox.Text);
         }
     }
 }

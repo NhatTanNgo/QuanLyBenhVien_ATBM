@@ -9,11 +9,8 @@
       Title="DeleteRolePage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Grid.Row="0">
             <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
@@ -23,6 +20,7 @@
                      Margin="20 0 0 0"/>
             <Button x:Name="DeleteButton"
                     Content="Xóa"
+                    Click="DeleteButton_Click"
                     Margin="30 0 0 0"/>
         </StackPanel>
     </Grid>

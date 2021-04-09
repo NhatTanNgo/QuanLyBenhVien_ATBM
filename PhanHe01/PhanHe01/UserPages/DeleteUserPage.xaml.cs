@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,30 @@ namespace PhanHe01.UserPages
         public DeleteUserPage()
         {
             InitializeComponent();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            String username = UsernameTextBox.Text.ToUpper();
+
+            if (username.Trim().Equals(""))
+            {
+                MessageBox.Show("Username Require!");
+                return;
+            }
+
+            try
+            {
+                BUS_User.Instance.DeleteUser(username, CascadeCheckBox.IsEnabled);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            MessageBox.Show($"{username} droped successfully!");
+
         }
     }
 }

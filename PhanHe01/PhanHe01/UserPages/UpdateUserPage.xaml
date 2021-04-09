@@ -9,10 +9,12 @@
       Title="UpdateUserPage">
 
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Left"
-                    Grid.Row="0">
+                    HorizontalAlignment="Center"
+                    Margin="20">
                 <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
                    Text="Nhập tên USER cần sửa: "/>
                 <TextBox x:Name="UsernameTextBox"
@@ -20,31 +22,37 @@
                      Margin="20 0 0 0"/>
                 <Button x:Name="CheckButton"
                     Content="Kiểm tra"
-                    Margin="30 0 0 0"/>
+                    Margin="30 0 0 0"
+                    Click="CheckButton_Click"/>
             </StackPanel>
 
             <StackPanel x:Name="SettingUserStackPanel" 
                         Orientation="Vertical"
+                        HorizontalAlignment="Center"
                         Visibility="Hidden">
                 <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Left">
-                    <CheckBox x:Name="ChangePasswordCheckBox"
-                          Content="Sửa password"/>
+                        HorizontalAlignment="Center"
+                            Margin="-80 0 0 20">
                     <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
                    Text="Nhập Password mới: "/>
                     <TextBox x:Name="NewPasswordTextBox"
                      Width="200"
                      Margin="20 0 0 0"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <RadioButton Content="Lock"
-                             GroupName="Lock_UnlockRadioButton"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0 0 0 10">
+                    <RadioButton x:Name="LockRadioButton"
+                                Content="Lock"
+                             GroupName="Lock_UnlockRadioButton"
+                                 Margin="15 0 25 0"/>
                     <RadioButton Content="Unlock"
                              GroupName="Lock_UnlockRadioButton"
                                  IsChecked="True"/>
                 </StackPanel>
                 <Button x:Name="OKButton"
-                    Content="OK"/>
+                    Content="OK"
+                    Click="OKButton_Click"/>
             </StackPanel>
             
         </StackPanel>

@@ -5,14 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PhanHe01.PrivilegePages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1024"
       Title="GrantPrivilegePage">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="1*" MaxHeight="450"/>
-            <RowDefinition Height="1*" MaxHeight="450"/>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
@@ -35,11 +36,12 @@
                     Visibility="Hidden"
                     ScrollViewer.CanContentScroll="True"
                     VerticalAlignment="Stretch">
-            <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"/>
+            <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"
+                       Height="20"/>
             <DataGrid x:Name="PrivilegeOnTable_DataGrid"
                     AutoGenerateColumns="False"
                     HorizontalAlignment="Stretch"
-                    MaxHeight="400"
+                    Height="250"
                     ScrollViewer.CanContentScroll="True"
                     ScrollViewer.VerticalScrollBarVisibility="Visible"
                     >
@@ -73,10 +75,13 @@
 
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="ConfirmButton"
-                    Content="Xác nhận"
-                    Click="ConfirmButton_Click"
-                    HorizontalAlignment="Center"/>
+            
         </StackPanel>
+        <Button x:Name="ConfirmButton"
+                    Content="Xác nhận"
+                    Grid.Row="3"
+                    Click="ConfirmButton_Click"
+                    HorizontalAlignment="Center"
+                    Margin="0 0 0 10"/>
     </Grid>
 </Page>

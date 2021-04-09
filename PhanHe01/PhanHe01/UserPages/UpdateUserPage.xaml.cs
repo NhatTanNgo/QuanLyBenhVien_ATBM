@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,33 @@ namespace PhanHe01.UserPages
         public UpdateUserPage()
         {
             InitializeComponent();
+        }
+
+        private void CheckButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool checkExistUser = BUS_User.Instance.CheckUser(UsernameTextBox.Text);
+            if (!checkExistUser)
+            {
+                MessageBox.Show("KHÔNG TÌM THẤY USER NÀY!", "Oops");
+                return;
+            }
+
+            SettingUserStackPanel.Visibility = Visibility;
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                BUS_User.Instance.UpdateUser(UsernameTextBox.Text, (bool)LockRadioButton.IsChecked, NewPasswordTextBox.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            MessageBox.Show($"Update {UsernameTextBox.Text} successfully!");
         }
     }
 }

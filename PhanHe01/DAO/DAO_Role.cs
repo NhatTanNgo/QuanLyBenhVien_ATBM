@@ -33,5 +33,70 @@ namespace DAO
 
             return dataTable;
         }
+
+        public void GrantRoleToUser(String role, String username)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"GRANT {role} TO {username}";
+            command.Connection = _conn;
+
+            _conn.Open();
+            command.ExecuteNonQuery();
+            _conn.Close();
+        }
+
+        public void CreateRole(String rolename, String password)
+        {
+            bool hasPassword = true;
+            if(password.Length==0)
+            {
+                hasPassword = false;
+            }
+
+            OracleCommand command = new OracleCommand();
+            if(hasPassword)
+            {
+                command.CommandText = $"CREATE ROLE {rolename} IDENTIFIED BY {password}";
+            }
+            else
+            {
+                command.CommandText = $"CREATE ROLE {rolename} NOT IDENTIFIED";
+            }
+            command.Connection = _conn;
+
+            try
+            {
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch (OracleException ex)
+            {
+                _conn.Close();
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public void DeleteRole(String rolename)
+        {
+           
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"DROP ROLE {rolename}";
+            command.Connection = _conn;
+
+            try
+            {
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch (OracleException ex)
+            {
+                _conn.Close();
+                throw new Exception(ex.Message);
+            }
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,31 @@ namespace PhanHe01.UserPages
         public AddRolePage()
         {
             InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            String rolename = RolenameTextBox.Text.ToUpper();
+            String password = PasswordTextBox.Text.ToUpper();
+           
+
+            if(rolename.Trim().Equals(""))
+            {
+                MessageBox.Show("Role Require!");
+                return;
+            }
+
+            try
+            {
+                BUS_Role.Instance.CreateRole(rolename, password);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            MessageBox.Show($"{rolename} created successfully!");
         }
     }
 }

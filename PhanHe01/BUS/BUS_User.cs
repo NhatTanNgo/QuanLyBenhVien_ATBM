@@ -58,5 +58,41 @@ namespace BUS
             return false;
             
         }
+
+        public void CreateUser(String username, String password)
+        {
+            try
+            {
+                DAO_User.Instance.CreateUser(username, password);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void DeleteUser(String username, bool cascade)
+        {
+            try
+            {
+                DAO_User.Instance.DeleteUser(username, cascade);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void UpdateUser(String username, bool isLock, string password)
+        {
+            try
+            {
+                DAO_User.Instance.UpdateUser(username, isLock, password);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

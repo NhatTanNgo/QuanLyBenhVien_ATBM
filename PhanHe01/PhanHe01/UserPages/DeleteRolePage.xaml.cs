@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,30 @@ namespace PhanHe01.UserPages
         {
             InitializeComponent();
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            String rolename = RolenameTextBox.Text.ToUpper();
+
+            if (rolename.Trim().Equals(""))
+            {
+                MessageBox.Show("Rolename Require!");
+                return;
+            }
+
+            try
+            {
+                BUS_Role.Instance.DeleteRole(rolename);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            MessageBox.Show($"{rolename} droped successfully!");
+
+        }
     }
+ 
 }

@@ -9,11 +9,8 @@
       Title="DeleteUserPage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Grid.Row="0">
             <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
@@ -21,8 +18,12 @@
             <TextBox x:Name="UsernameTextBox"
                      Width="200"
                      Margin="20 0 0 0"/>
+            <CheckBox x:Name="CascadeCheckBox"
+                Content="CASCADE"
+                      Margin="20 0 0 0"/>
             <Button x:Name="DeleteButton"
                     Content="Xóa"
+                    Click="DeleteButton_Click"
                     Margin="30 0 0 0"/>
         </StackPanel>
     </Grid>

@@ -30,5 +30,11 @@ namespace PhanHe01
             PrivilegePages.GrantPrivilegePage grantPrivilegePage = new PrivilegePages.GrantPrivilegePage();
             SubFrame.Navigate(grantPrivilegePage);
         }
+
+        private void GrantRoleToUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrivilegePages.GrantRoleToUserPage grantRoleToUserPage = new PrivilegePages.GrantRoleToUserPage();
+            SubFrame.Navigate(grantRoleToUserPage);
+        }
     }
 }
