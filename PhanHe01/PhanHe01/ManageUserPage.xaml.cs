@@ -30,5 +30,51 @@ namespace PhanHe01
             UserPages.ShowPrivilegePage showPrivilegePage = new UserPages.ShowPrivilegePage();
             SubFrame.Navigate(showPrivilegePage);
         }
+
+        private void ListUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.ShowUsersPage showUsersPage = new UserPages.ShowUsersPage();
+            SubFrame.Navigate(showUsersPage);
+        }
+
+        private void CheckPrivilegeButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.ShowPrivilegePage showPrivilegePage = new UserPages.ShowPrivilegePage();
+            SubFrame.Navigate(showPrivilegePage);
+        }
+
+        private void AddUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.AddUserPage addUserPage = new UserPages.AddUserPage();
+            SubFrame.Navigate(addUserPage);
+        }
+
+        private void DeleteUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.DeleteUserPage deleteUserPage = new UserPages.DeleteUserPage();
+            SubFrame.Navigate(deleteUserPage);
+        }
+
+        private void UpdateUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.UpdateUserPage updateUserPage = new UserPages.UpdateUserPage();
+            SubFrame.Navigate(updateUserPage);
+        }
+
+        private void AddRoleButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.AddRolePage addRolePage = new UserPages.AddRolePage();
+            SubFrame.Navigate(addRolePage);
+        }
+
+        private void UpdateRoleButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void DeleteRoleButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPages.DeleteRolePage deleteRolePage = new UserPages.DeleteRolePage();
+            SubFrame.Navigate(deleteRolePage);
+        }
     }
 }

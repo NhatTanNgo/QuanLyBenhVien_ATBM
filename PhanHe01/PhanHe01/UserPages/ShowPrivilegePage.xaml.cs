@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,10 +32,14 @@ namespace PhanHe01.UserPages
         {
             String username = UsernameTextBox.Text;
 
-            List<DTO_PrivilegeOnTable> privilegeOnTables = 
+            ObservableCollection<DTO_PrivilegeOnTable> privilegeOnTables = 
                 BUS_Privilege.Instance.GetPrivilegesOnTable(username);
+            ObservableCollection<DTO_PrivilegeOnColumn> privilegeOnColumns =
+                BUS_Privilege.Instance.GetPrivilegeOnColumn(username);
 
             PrivilegeOnTable_DataGrid.ItemsSource = privilegeOnTables;
+            PrivilegeOnColumn_DataGrid.ItemsSource = privilegeOnColumns;
+
 
         }
     }

@@ -5,17 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PhanHe01.UserPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="768" d:DesignWidth="1024"
       Title="ShowPrivilegePage">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1*" MaxHeight="450"/>
+            <RowDefinition Height="1*" MaxHeight="450"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
-                    Grid.Row="0">
+                    Grid.Row="0"
+                    Margin="5">
             <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
                    Text="Nhập tên USER/ROLE: "/>
             <TextBox x:Name="UsernameTextBox"
@@ -26,28 +28,66 @@
                     Margin="30 0 0 0"
                     Click="CheckButton_Click"/>
         </StackPanel>
-        <DataGrid x:Name="PrivilegeOnTable_DataGrid"
+        <StackPanel Orientation="Vertical"
                     Grid.Row="1"
+                    Margin="5"
+                    ScrollViewer.CanContentScroll="True"
+                    VerticalAlignment="Stretch">
+            <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"/>
+            <DataGrid x:Name="PrivilegeOnTable_DataGrid"
                     AutoGenerateColumns="False"
-                    HorizontalAlignment="Stretch">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="TABLE NAME"
+                    HorizontalAlignment="Stretch"
+                    MaxHeight="400"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Visible"
+                    >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="TABLE NAME"
                                     IsReadOnly="True"
                                     Binding="{Binding TableName}"/>
-                <DataGridCheckBoxColumn Header="SELECT"
+                    <DataGridCheckBoxColumn Header="SELECT"
                                         IsReadOnly="True"
                                         Binding="{Binding IsSelect}"/>
-                <DataGridCheckBoxColumn Header="UPDATE"
+                    <DataGridCheckBoxColumn Header="UPDATE"
                                         IsReadOnly="True"
                                         Binding="{Binding IsUpdate}"/>
-                <DataGridCheckBoxColumn Header="INSERT"
+                    <DataGridCheckBoxColumn Header="INSERT"
                                         IsReadOnly="True"
                                         Binding="{Binding IsInsert}"/>
-                <DataGridCheckBoxColumn Header="DELETE"
+                    <DataGridCheckBoxColumn Header="DELETE"
                                         IsReadOnly="True"
                                         Binding="{Binding IsDelete}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                    <DataGridTextColumn Header="GRANTOR"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Grantor}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+           
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="2">
+            <TextBlock Text="PHÂN QUYỀN THEO MỨC CỘT"/>
+            <DataGrid x:Name="PrivilegeOnColumn_DataGrid"
+                      AutoGenerateColumns="False"
+                      MaxHeight="400"
+                      HorizontalAlignment="Stretch"
+                      IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="TABLE_NAME"
+                                        IsReadOnly="True"
+                                        Binding="{Binding TableName}"/>
+                    <DataGridTextColumn Header="COLUMN_NAME"
+                                        IsReadOnly="True"
+                                        Binding="{Binding ColumnName}"/>
+                    <DataGridTextColumn Header="PRIVILEGE"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Privilege}"/>
+                    <DataGridTextColumn Header="GRANTOR"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Grantor}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
             
         
     </Grid>

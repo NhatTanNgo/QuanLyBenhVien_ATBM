@@ -12,6 +12,9 @@ namespace DTO
         public bool IsInsert { get; set; }
         public bool IsUpdate { get; set; }
         public bool IsDelete { get; set; }
+        public bool IsGrantable { get; set; }
+        public String Grantor { get; set; }
+        public String Privilege { get; set; }
 
         public DTO_PrivilegeOnColumn()
         {
@@ -19,6 +22,7 @@ namespace DTO
             IsInsert = false;
             IsUpdate = false;
             IsDelete = false;
+            IsGrantable = false;
         }
     }
 }

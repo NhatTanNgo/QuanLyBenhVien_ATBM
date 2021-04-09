@@ -5,17 +5,59 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PhanHe01.UserPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ShowUsersPage">
+      d:DesignHeight="700" d:DesignWidth="1024"
+      Title="ShowUsersPage"
+      Loaded="Page_Loaded">
 
     <Grid>
-        <ListView x:Name="UsersListView">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" Width="150"/>
-                    <GridViewColumn Header="Age" Width="150"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0"
+                    Margin="5"
+                    ScrollViewer.CanContentScroll="True"
+                    VerticalAlignment="Stretch">
+            <TextBlock Text="DANH SÁCH USERS"/>
+            <DataGrid x:Name="ListUsers_DataGrid"
+                    AutoGenerateColumns="False"
+                    HorizontalAlignment="Stretch"
+                    MaxHeight="300"
+                    IsReadOnly="True"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Visible"
+                    >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="USERNAME"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Username}"/>
+                    <DataGridTextColumn Header="USER_ID"
+                                        Binding="{Binding Username_ID}"/>
+                    <DataGridTextColumn Header="CREATED"
+                                        Binding="{Binding Created}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1">
+            <TextBlock Text="DANH SÁCH ROLES"/>
+            <DataGrid x:Name="ListRoles_DataGrid"
+                      AutoGenerateColumns="False"
+                      MaxHeight="300"
+                      HorizontalAlignment="Stretch"
+                      IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ROLE"
+                                        IsReadOnly="True"
+                                        Binding="{Binding RoleName}"/>
+                    <DataGridTextColumn Header="ROLE_ID"
+                                        IsReadOnly="True"
+                                        Binding="{Binding Role_ID}"/>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>

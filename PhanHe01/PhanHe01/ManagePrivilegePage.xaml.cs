@@ -24,5 +24,11 @@ namespace PhanHe01
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            PrivilegePages.GrantPrivilegePage grantPrivilegePage = new PrivilegePages.GrantPrivilegePage();
+            SubFrame.Navigate(grantPrivilegePage);
+        }
     }
 }

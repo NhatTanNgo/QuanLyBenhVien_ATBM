@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace PhanHe01.UserPages
         public ShowUsersPage()
         {
             InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ListUsers_DataGrid.ItemsSource = BUS_User.Instance.GetAllUsers();
+            ListRoles_DataGrid.ItemsSource = BUS_Role.Instance.GetAllRoles();
         }
     }
 }
