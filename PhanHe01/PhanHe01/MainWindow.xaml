@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:local="clr-namespace:PhanHe01"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
@@ -11,13 +12,14 @@
         
     </Window.Resources>
     
-    <Grid>
+    <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid x:Name="MenuTab"
+              Margin="20 0 0 0"
               Grid.Row="0"
               HorizontalAlignment="Left"
               VerticalAlignment="Center">
@@ -28,20 +30,24 @@
             
             <Button x:Name="ManageUserButton"
                     Grid.Column="0"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
                     Content="Quản lý người dùng"
+                    Foreground="Black"
                     FontSize="15"
-                    Padding="10"
                     Click="ManageUserButton_Click"
                     Background="Transparent"
                     />
 
-            <Button x:Name="ManagePrivilege"
+            <Button x:Name="ManagePrivilegeButton"
                     Grid.Column="1"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
                     Content="Quản lý phân quyền"
+                    Foreground="Black"
                     FontSize= "15"
-                    Padding="10"
                     Background="Transparent"
-                    Click="ManagePrivilege_Click"
+                    Click="ManagePrivilegeButton_Click"
                     Margin="20 0 0 0"/>
         </Grid>
 
@@ -64,6 +70,9 @@
                        Margin="0 0 20 0"/>
             
         </StackPanel>
-        
+
+        <Frame Grid.Row="1"
+               Name="MainFrame"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

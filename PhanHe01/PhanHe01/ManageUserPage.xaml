@@ -1,0 +1,58 @@
+﻿<Page x:Class="PhanHe01.ManageUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PhanHe01"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ManageUserPage"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10 0 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0">
+            <Button x:Name="ListUserButton"
+                    Content="Danh sách người dùng"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="CheckPrivilegeButton" 
+                    Content="Kiểm tra quyền"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="AddUserButton" 
+                    Content="Thêm User"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="DeleteUserButton" 
+                    Content="Xóa User"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="UpdateUserButton" 
+                    Content="Sửa User"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="AddRoleButton" 
+                    Content="Thêm Role"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="UpdateRoleButton" 
+                    Content="Sửa Role"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+            <Button x:Name="DeleteRoleButton" 
+                    Content="Xóa Role"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
+        </StackPanel>
+
+        <Frame Grid.Column="1"
+               x:Name="SubFrame"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Page>

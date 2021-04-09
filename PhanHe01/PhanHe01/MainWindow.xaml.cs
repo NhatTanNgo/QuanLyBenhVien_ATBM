@@ -27,6 +27,9 @@ namespace PhanHe01
             InitializeComponent();
         }
 
+        private ManageUserPage manageUserPage = new ManageUserPage();
+        private ManagePrivilegePage managePrivilegePage = new ManagePrivilegePage();
+
         private void ManageUserButton_Click(object sender, RoutedEventArgs e)
         {
             if(tabSelection == 0)
@@ -35,11 +38,13 @@ namespace PhanHe01
             }
 
             tabSelection = 0;
-            ManagePrivilege.Background = Brushes.Gray;
+            ManagePrivilegeButton.Background = Brushes.LightGray;
             ManageUserButton.Background = Brushes.White;
+
+            MainFrame.Navigate(manageUserPage);
         }
 
-        private void ManagePrivilege_Click(object sender, RoutedEventArgs e)
+        private void ManagePrivilegeButton_Click(object sender, RoutedEventArgs e)
         {
             if (tabSelection == 1)
             {
@@ -47,15 +52,19 @@ namespace PhanHe01
             }
 
             tabSelection = 1;
-            ManagePrivilege.Background = Brushes.White;
-            ManageUserButton.Background = Brushes.Gray;
+            ManagePrivilegeButton.Background = Brushes.White;
+            ManageUserButton.Background = Brushes.LightGray;
+
+            MainFrame.Navigate(managePrivilegePage);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             tabSelection = 0;
-            ManagePrivilege.Background = Brushes.Gray;
+            ManagePrivilegeButton.Background = Brushes.LightGray;
             ManageUserButton.Background = Brushes.White;
+
+            MainFrame.Navigate(manageUserPage);
         }
     }
 }
