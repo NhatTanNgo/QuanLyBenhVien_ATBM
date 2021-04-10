@@ -1,0 +1,9 @@
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\x64\Debug\netstandard2.0\DTO.deps.json
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\x64\Debug\netstandard2.0\DTO.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\x64\Debug\netstandard2.0\DTO.pdb
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.csprojAssemblyReference.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.AssemblyInfoInputs.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.AssemblyInfo.cs
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.csproj.CoreCompileInputs.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\x64\Debug\netstandard2.0\DTO.pdb

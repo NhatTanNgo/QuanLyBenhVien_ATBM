@@ -50,6 +50,7 @@ namespace PhanHe01.PrivilegePages
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, null, UsernameTextBox.Text);
+            MessageBox.Show($"Successfully!");
         }
     }
 }

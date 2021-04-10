@@ -1,0 +1,14 @@
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\BUS.deps.json
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\BUS.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\BUS.pdb
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\DAO.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\DTO.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\DAO.pdb
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\bin\x64\Debug\netstandard2.0\DTO.pdb
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.csprojAssemblyReference.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.AssemblyInfoInputs.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.AssemblyInfo.cs
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.csproj.CoreCompileInputs.cache
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.csproj.CopyComplete
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\BUS\obj\x64\Debug\netstandard2.0\BUS.pdb

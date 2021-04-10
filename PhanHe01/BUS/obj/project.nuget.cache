@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "b7DRAqCl/ZKEnhIRoRSV/+tZnWLNO7BALO+O9+7gkjACvXz8DQCEwi1XZvPJD6reioQs4XVmgRq+m5/bvj0xLw==",
+  "success": true,
+  "projectFilePath": "D:\\An toàn và bảo mật HTTT\\giữa kì\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\odp.net.x86\\112.3.20\\odp.net.x86.112.3.20.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'odp.net.x86 112.3.20' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "odp.net.x86",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}
