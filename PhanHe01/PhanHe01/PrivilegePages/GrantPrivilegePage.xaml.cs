@@ -29,6 +29,7 @@ namespace PhanHe01.PrivilegePages
         }
 
         private ObservableCollection<DTO_PrivilegeOnTable> privilegesOnTableList = null;
+        private List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns = new List<ObservableCollection<DTO_PrivilegeOnColumn>>();
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
@@ -49,7 +50,35 @@ namespace PhanHe01.PrivilegePages
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, null, UsernameTextBox.Text);
+            BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, UsernameTextBox.Text);
+            BUS_Privilege.Instance.ExecPrivilegeOnColumn(privilegeOnColumns, UsernameTextBox.Text);
         }
+
+        private void PrivilegeColumnButton_Click(object sender, RoutedEventArgs e)
+        {
+            DTO_PrivilegeOnTable selectedRow = PrivilegeOnTable_DataGrid.SelectedItem as DTO_PrivilegeOnTable;
+            if(selectedRow == null) {
+                return;
+            }
+            PrivsColumnWindow privsColumnWindow = new PrivsColumnWindow(this, selectedRow, UsernameTextBox.Text);
+            if(OpenSubWindow)
+            {
+                privsColumnWindow.Show();
+               
+            }
+            else
+            {
+                MessageBox.Show("No privleges on columns detected!");
+                privsColumnWindow.Close();
+            }
+
+        }
+
+        public void GetPrivilegesFromColumn(ObservableCollection<DTO_PrivilegeOnColumn> list)
+        {
+            privilegeOnColumns.Add(list);
+        }
+
+        public bool OpenSubWindow { get; set; }
     }
 }

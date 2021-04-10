@@ -35,7 +35,15 @@ namespace PhanHe01.UserPages
             ObservableCollection<DTO_PrivilegeOnTable> privilegeOnTables = 
                 BUS_Privilege.Instance.GetPrivilegesOnTable(username);
             ObservableCollection<DTO_PrivilegeOnColumn> privilegeOnColumns =
-                BUS_Privilege.Instance.GetPrivilegeOnColumn(username);
+                BUS_Privilege.Instance.GetPrivilegesOnColumnSelect(username);
+
+            ObservableCollection<DTO_PrivilegeOnColumn> tmp =
+                BUS_Privilege.Instance.GetPrivilegeOnColumnUpdateInsert(username);
+            
+            for(int i =0;i <tmp.Count; i++)
+            {
+                privilegeOnColumns.Add(tmp[i]);
+            }
 
             PrivilegeOnTable_DataGrid.ItemsSource = privilegeOnTables;
             PrivilegeOnColumn_DataGrid.ItemsSource = privilegeOnColumns;

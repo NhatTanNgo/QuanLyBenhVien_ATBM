@@ -27,8 +27,7 @@ namespace PhanHe01
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            UserPages.ShowPrivilegePage showPrivilegePage = new UserPages.ShowPrivilegePage();
-            SubFrame.Navigate(showPrivilegePage);
+          
         }
 
         private void ListUserButton_Click(object sender, RoutedEventArgs e)

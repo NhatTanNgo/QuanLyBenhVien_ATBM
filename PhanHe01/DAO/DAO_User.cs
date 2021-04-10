@@ -105,9 +105,18 @@ namespace DAO
             command.CommandText = $"SELECT * FROM dba_users WHERE ACCOUNT_STATUS = 'OPEN' ORDER BY CREATED DESC";
             command.Connection = _conn;
 
-            OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable dataTable = new DataTable(); //create a new table
-            adapter.Fill(dataTable);
+            OracleDataAdapter adapter;
+            DataTable dataTable;
+            try
+            {
+                adapter = new OracleDataAdapter(command);
+                dataTable = new DataTable(); //create a new table
+                adapter.Fill(dataTable);
+            }
+            catch(OracleException ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
             return dataTable;
         }

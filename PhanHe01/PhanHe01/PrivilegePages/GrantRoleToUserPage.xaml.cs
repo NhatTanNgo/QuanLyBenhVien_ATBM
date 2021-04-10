@@ -61,7 +61,16 @@ namespace PhanHe01.PrivilegePages
             {
                 return;
             }
-            BUS_Role.Instance.GrantRoleToUser(role, granted);
+            try
+            {
+                BUS_Role.Instance.GrantRoleToUser(role, granted);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
             MessageBox.Show("Grant succeeded.");
         }
 

@@ -63,7 +63,7 @@
                 </Ellipse.Fill>
             </Ellipse>
             
-            <TextBlock x:Name="LoginUsername"
+            <TextBlock x:Name="LoginUsernameTextBlock"
                        VerticalAlignment="Center"
                        Text="Login Username"
                        FontSize="15"

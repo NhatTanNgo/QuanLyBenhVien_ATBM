@@ -94,5 +94,17 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
         }
+
+        public void Login(String username, String password, String dbName)
+        {
+            try
+            {
+                DBConnect.InitConnection(username, password, dbName);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

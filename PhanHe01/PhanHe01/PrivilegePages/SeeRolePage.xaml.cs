@@ -14,14 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PhanHe01.UserPages
+namespace PhanHe01.PrivilegePages
 {
     /// <summary>
-    /// Interaction logic for UpdateUserPage.xaml
+    /// Interaction logic for SeeRolePage.xaml
     /// </summary>
-    public partial class UpdateUserPage : Page
+    public partial class SeeRolePage : Page
     {
-        public UpdateUserPage()
+        public SeeRolePage()
         {
             InitializeComponent();
         }
@@ -34,23 +34,8 @@ namespace PhanHe01.UserPages
                 MessageBox.Show("KHÔNG TÌM THẤY USER NÀY!", "Oops");
                 return;
             }
+            Role_DataGrid.ItemsSource = BUS_Role.Instance.GetRolesOfUser(UsernameTextBox.Text);
 
-            SettingUserStackPanel.Visibility = Visibility;
-        }
-
-        private void OKButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                BUS_User.Instance.UpdateUser(UsernameTextBox.Text, (bool)LockRadioButton.IsChecked, NewPasswordTextBox.Password);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-
-            MessageBox.Show($"Update {UsernameTextBox.Text} successfully!");
         }
     }
 }

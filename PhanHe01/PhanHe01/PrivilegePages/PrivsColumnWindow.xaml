@@ -1,0 +1,46 @@
+﻿<Window x:Class="PhanHe01.PrivilegePages.PrivsColumnWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhanHe01.PrivilegePages"
+        mc:Ignorable="d"
+        Title="PrivsColumnWindow" Height="400" Width="400"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="PrivSColumnDataGrid"
+                  Height="300"
+                  AutoGenerateColumns="False"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Stretch"
+                  ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="COLUMN NAME"
+                                    Binding="{Binding ColumnName}"/>
+                <DataGridCheckBoxColumn Header="SELECT"
+                                        Binding="{Binding IsSelect, Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+
+                <DataGridCheckBoxColumn Header="GRANT OPTION (SELECT)"
+                                            Binding="{Binding IsSelectGrantable, Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridCheckBoxColumn Header="UPDATE"
+                                        Binding="{Binding IsUpdate, Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridCheckBoxColumn Header="GRANT OPTION (UPDATE)"
+                                            Binding="{Binding IsUpdateGrantable, Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="ConfirmButton"
+                Grid.Row="1"
+                Content="Confirm"
+                Click="ConfirmButton_Click"
+                VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

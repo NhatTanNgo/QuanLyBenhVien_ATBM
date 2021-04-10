@@ -19,6 +19,7 @@
                     Grid.Column="0">
             <Button x:Name="GrantPrivilegeButton"
                     Content="Cấp quyền User/Role"
+                    Click="GrantPrivilegeButton_Click"
                     Margin="0 5"
                     HorizontalAlignment="Stretch"/>
             <Button x:Name="GrantRoleToUserButton" 
@@ -26,7 +27,11 @@
                     Click="GrantRoleToUserButton_Click"
                     Margin="0 5"
                     HorizontalAlignment="Stretch"/>
-
+            <Button x:Name="SeeRoleOfUserButton" 
+                    Content="Xem Role của User"
+                    Click="SeeRoleOfUserButton_Click"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
             
         </StackPanel>
         <Frame Grid.Column="1" x:Name="SubFrame"

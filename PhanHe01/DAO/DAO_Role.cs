@@ -24,7 +24,9 @@ namespace DAO
         public DataTable GetAllRoles()
         {
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"SELECT * FROM DBA_ROLES";
+            command.CommandText = $"Select Role, Role_ID " +
+                                  $"From user_ROLE_PRIVS US join DBA_ROLES DR ON DR.ROLE = US.GRANTED_ROLE " +
+                                  $"WHERE DR.ROLE <> 'CONNECT' AND DR.ROLE <> 'RESOURCE' AND DR.ROLE <> 'DBA'";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -40,9 +42,18 @@ namespace DAO
             command.CommandText = $"GRANT {role} TO {username}";
             command.Connection = _conn;
 
-            _conn.Open();
-            command.ExecuteNonQuery();
-            _conn.Close();
+            try
+            {
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch(OracleException ex)
+            {
+                _conn.Close();
+                throw new Exception(ex.Message);
+            }
+           
         }
 
         public void CreateRole(String rolename, String password)
@@ -96,7 +107,27 @@ namespace DAO
                 _conn.Close();
                 throw new Exception(ex.Message);
             }
+        }
 
+        public DataTable GetRolesOfUser(String username)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = '{username}'";
+            command.Connection = _conn;
+
+            OracleDataAdapter adapter = new OracleDataAdapter(command);
+            DataTable dataTable = new DataTable(); //create a new table
+            try
+            {
+                adapter.Fill(dataTable);
+            }
+            catch(OracleException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+            return dataTable;
         }
     }
 }

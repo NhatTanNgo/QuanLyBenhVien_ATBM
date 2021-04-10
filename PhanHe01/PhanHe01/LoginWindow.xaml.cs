@@ -11,44 +11,40 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PhanHe01.UserPages
+namespace PhanHe01
 {
     /// <summary>
-    /// Interaction logic for AddRolePage.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class AddRolePage : Page
+    public partial class LoginWindow : Window
     {
-        public AddRolePage()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+        private void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
-            String rolename = RolenameTextBox.Text;
+            String username = UsernameTextBox.Text;
             String password = PasswordTextBox.Password;
-           
-
-            if(rolename.Trim().Equals(""))
-            {
-                MessageBox.Show("Role Require!");
-                return;
-            }
+            
+            String dbname = DBNameTextBox.Text;
 
             try
             {
-                BUS_Role.Instance.CreateRole(rolename, password);
+                BUS_User.Instance.Login(username, password, dbname);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return;
             }
 
-            MessageBox.Show($"{rolename} created successfully!");
+            MainWindow mainWindow = new MainWindow(username);
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

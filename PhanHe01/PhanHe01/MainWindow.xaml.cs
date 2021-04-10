@@ -21,10 +21,11 @@ namespace PhanHe01
     public partial class MainWindow : Window
     {
         private int tabSelection = 0;
-
-        public MainWindow()
+        private String username;
+        public MainWindow(String loginUsername)
         {
             InitializeComponent();
+            username = loginUsername;
         }
 
         private ManageUserPage manageUserPage = new ManageUserPage();
@@ -63,7 +64,7 @@ namespace PhanHe01
             tabSelection = 0;
             ManagePrivilegeButton.Background = Brushes.LightGray;
             ManageUserButton.Background = Brushes.White;
-
+            LoginUsernameTextBlock.Text = "Hello " + username.ToUpper();
             MainFrame.Navigate(manageUserPage);
         }
     }

@@ -28,8 +28,8 @@ namespace PhanHe01.UserPages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            String username = UsernameTextBox.Text.ToUpper();
-            String password = PasswordTextBox.Text.ToUpper();
+            String username = UsernameTextBox.Text;
+            String password = PasswordTextBox.Password;
 
             if(password.Trim().Equals(""))
             {

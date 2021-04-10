@@ -19,7 +19,7 @@
                     Grid.Column="0">
             <Button x:Name="ListUserButton"
                     Click="ListUserButton_Click"
-                    Content="Danh sách người dùng"
+                    Content="Danh sách USER/ROLE"
                     Margin="0 5"
                     HorizontalAlignment="Stretch"/>
             <Button x:Name="CheckPrivilegeButton"

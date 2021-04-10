@@ -60,7 +60,14 @@ namespace BUS
 
         public void GrantRoleToUser(String role, String username)
         {
-            DAO_Role.Instance.GrantRoleToUser(role, username);
+            try
+            {
+                DAO_Role.Instance.GrantRoleToUser(role, username);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void CreateRole(String rolename, String password)
@@ -85,6 +92,34 @@ namespace BUS
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public List<DTO_Role> GetRolesOfUser(String username)
+        {
+
+            List<DTO_Role> result = new List<DTO_Role>();
+            DataTable data;
+            try
+            {
+                data = DAO_Role.Instance.GetRolesOfUser(username);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            foreach (DataRow row in data.Rows)
+            {
+                DTO_Role tmpObject = new DTO_Role();
+
+                tmpObject.RoleName = row["GRANTED_ROLE"].ToString();
+                tmpObject.Admin_Option = row["ADMIN_OPTION"].ToString();
+
+                result.Add(tmpObject);
+            }
+
+            return result;
+           
         }
 
     }

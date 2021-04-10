@@ -58,11 +58,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrivilegePages\GrantPrivilegePage.xaml.cs">
       <DependentUpon>GrantPrivilegePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PrivilegePages\GrantRoleToUserPage.xaml.cs">
       <DependentUpon>GrantRoleToUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrivilegePages\PrivsColumnWindow.xaml.cs">
+      <DependentUpon>PrivsColumnWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrivilegePages\SeeRolePage.xaml.cs">
+      <DependentUpon>SeeRolePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserPages\AddRolePage.xaml.cs">
       <DependentUpon>AddRolePage.xaml</DependentUpon>
@@ -85,6 +94,10 @@
     <Compile Include="UserPages\UpdateUserPage.xaml.cs">
       <DependentUpon>UpdateUserPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -110,6 +123,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PrivilegePages\GrantRoleToUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrivilegePages\PrivsColumnWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrivilegePages\SeeRolePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

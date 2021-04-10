@@ -8,5 +8,7 @@ namespace DTO
     {
         public String RoleName { get; set; }
         public String Role_ID { get; set; }
+
+        public String Admin_Option { get; set; }
     }
 }

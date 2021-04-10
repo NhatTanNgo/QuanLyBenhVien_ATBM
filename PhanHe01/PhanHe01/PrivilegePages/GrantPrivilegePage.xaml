@@ -12,7 +12,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*"/>
             <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
@@ -29,6 +28,11 @@
                     Margin="30 0 0 0"
                     Click="CheckButton_Click"/>
         </StackPanel>
+        <Button x:Name="PrivilegeColumnButton"
+                    Content="Phân quyền trên cột"
+                    Margin="30 0 30 0"
+                    HorizontalAlignment="Right"
+                    Click="PrivilegeColumnButton_Click"/>
         <StackPanel x:Name="PrivilegeTableStackPanel"
                     Orientation="Vertical"
                     Grid.Row="1"
@@ -41,7 +45,7 @@
             <DataGrid x:Name="PrivilegeOnTable_DataGrid"
                     AutoGenerateColumns="False"
                     HorizontalAlignment="Stretch"
-                    Height="250"
+                    Height="500"
                     ScrollViewer.CanContentScroll="True"
                     ScrollViewer.VerticalScrollBarVisibility="Visible"
                     >

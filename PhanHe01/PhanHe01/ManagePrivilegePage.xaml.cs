@@ -27,14 +27,26 @@ namespace PhanHe01
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            PrivilegePages.GrantPrivilegePage grantPrivilegePage = new PrivilegePages.GrantPrivilegePage();
-            SubFrame.Navigate(grantPrivilegePage);
+
         }
+
 
         private void GrantRoleToUserButton_Click(object sender, RoutedEventArgs e)
         {
             PrivilegePages.GrantRoleToUserPage grantRoleToUserPage = new PrivilegePages.GrantRoleToUserPage();
             SubFrame.Navigate(grantRoleToUserPage);
+        }
+
+        private void GrantPrivilegeButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrivilegePages.GrantPrivilegePage grantPrivilegePage = new PrivilegePages.GrantPrivilegePage();
+            SubFrame.Navigate(grantPrivilegePage);
+        }
+
+        private void SeeRoleOfUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrivilegePages.SeeRolePage seeRolePage = new PrivilegePages.SeeRolePage();
+            SubFrame.Navigate(seeRolePage);
         }
     }
 }
