@@ -70,7 +70,6 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
         }
-
         public void DeleteUser(String username, bool cascade)
         {
             try

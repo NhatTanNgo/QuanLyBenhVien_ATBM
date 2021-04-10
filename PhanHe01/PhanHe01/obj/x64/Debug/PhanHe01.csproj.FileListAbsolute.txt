@@ -1,0 +1,6 @@
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\PhanHe01.exe
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\BUS.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\HandyControl.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\Oracle.DataAccess.dll
+D:\An toàn và bảo mật HTTT\giữa kì\QuanLyBenhVien_ATBM\PhanHe01\PhanHe01\bin\x64\Debug\en\HandyControl.resources.dll
