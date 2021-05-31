@@ -1,0 +1,9 @@
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.deps.json
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.dll
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.pdb
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.csprojAssemblyReference.cache
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfoInputs.cache
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfo.cs
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.csproj.CoreCompileInputs.cache
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.dll
+F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.pdb
