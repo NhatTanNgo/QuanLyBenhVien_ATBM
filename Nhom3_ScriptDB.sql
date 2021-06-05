@@ -449,3 +449,18 @@ AS
         EXECUTE IMMEDIATE grant_opt_statement;
     end if;
 END;
+
+
+
+--- adjust database
+alter table BOPHAN
+modify TenBoPhan varchar2(100);
+
+ALTER TABLE NHANVIEN
+DROP COLUMN CHUCVU;
+
+ALTER TABLE NHANVIEN
+ADD NV_USERNAME varchar2(20);
+
+--- drop trigger
+drop trigger CHAMCONG_SONGAYCONG;
