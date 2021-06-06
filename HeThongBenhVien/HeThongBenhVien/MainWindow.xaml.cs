@@ -22,29 +22,16 @@ namespace HeThongBenhVien
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        String _username = null;
+        public MainWindow(String username)
         {
             InitializeComponent();
+            _username = username;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            String connectionString = $"Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID =OT; Password=minhlamv18";
-
-
-            OracleConnection connection = null;
-            try
-            {
-                connection = new OracleConnection(connectionString);
-                connection.Open();
-                connection.Close();
-            }
-            catch (OracleException ex)
-            {
-                connection = null;
-                MessageBox.Show(ex.Message);
-                throw new Exception(ex.Message);
-            }
+            txt_username.Text += _username;
         }
 
         private void btn_left_Click(object sender, RoutedEventArgs e)

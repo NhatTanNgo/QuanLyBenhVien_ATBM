@@ -25,5 +25,8 @@
                 Content="Click cái này ik"
                 Click="btn_right_Click"
                 Visibility="Hidden"/>
+        <TextBlock x:Name="txt_username"
+                   Grid.Column="1" Grid.Row="1" 
+                   Text="THIS IS USERNAME: "/>
     </Grid>
 </Window>

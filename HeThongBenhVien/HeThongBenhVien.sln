@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeThongBenhVien", "HeThongBenhVien\HeThongBenhVien.csproj", "{CCFB3C9C-EF1C-4FA5-BE94-6470CE844C80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{754BFEAB-02F0-4FA1-9098-D3A003AE1E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{5B298209-61C4-49FC-82D9-E47E89D13944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{BEA5F062-EDB3-490F-BFBD-367C01B0E2EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{CCFB3C9C-EF1C-4FA5-BE94-6470CE844C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCFB3C9C-EF1C-4FA5-BE94-6470CE844C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCFB3C9C-EF1C-4FA5-BE94-6470CE844C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754BFEAB-02F0-4FA1-9098-D3A003AE1E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754BFEAB-02F0-4FA1-9098-D3A003AE1E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754BFEAB-02F0-4FA1-9098-D3A003AE1E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754BFEAB-02F0-4FA1-9098-D3A003AE1E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B298209-61C4-49FC-82D9-E47E89D13944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B298209-61C4-49FC-82D9-E47E89D13944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B298209-61C4-49FC-82D9-E47E89D13944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B298209-61C4-49FC-82D9-E47E89D13944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA5F062-EDB3-490F-BFBD-367C01B0E2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA5F062-EDB3-490F-BFBD-367C01B0E2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA5F062-EDB3-490F-BFBD-367C01B0E2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA5F062-EDB3-490F-BFBD-367C01B0E2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
