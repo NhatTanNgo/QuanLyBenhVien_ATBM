@@ -9,7 +9,7 @@ CREATE TABLE NHANVIEN (
     DOB date NOT NULL,
     LuongCoBan INT NOT NULL,
     PhuCap int NOT NULL,
-    ChucVu varchar2(10) NOT NULL,
+    USERNAME varchar2(20) NOT NULL,
     MaBoPhan varchar2(10) NOT NULL,
 	
 	CONSTRAINT PK_NHANVIEN 
@@ -21,7 +21,7 @@ CREATE TABLE NHANVIEN (
 CREATE TABLE BOPHAN
 (
     MaBoPhan varchar2(10) NOT NULL,
-    TenBoPhan varchar2(20) NOT NULL,
+    TenBoPhan varchar2(50) NOT NULL,
 	
 	CONSTRAINT PK_BOPHAN 
 	PRIMARY KEY (MaBoPhan)
@@ -44,7 +44,7 @@ CREATE TABLE LICHTRUCPHONG
 CREATE TABLE PHONGKHAM
 (
     MaPhongKham varchar2(10) NOT NULL,
-    TenPhongKham varchar2(20) NOT NULL,
+    TenPhongKham varchar2(50) NOT NULL,
 	
 	CONSTRAINT PK_PHONGKHAM
 	PRIMARY KEY(MaPhongKham)
@@ -318,9 +318,10 @@ CREATE OR REPLACE TRIGGER NHANVIEN_DOB
 BEFORE INSERT OR UPDATE OF DOB
 ON NHANVIEN
 FOR EACH ROW
-WHEN (EXTRACT(MONTH FROM SYSDATE) - EXTRACT(MONTH FROM new.DOB) < 18)
 BEGIN  
-        dbms_output.put_line ('Nhan vien phai tren 18 tuoi');
+        IF (EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM :new.DOB) < 18) THEN
+            dbms_output.put_line ('Nhan vien phai tren 18 tuoi');
+        END IF;
 END;
 /
 
@@ -345,14 +346,14 @@ BEFORE INSERT OR UPDATE OF SONGAYCONG
 ON PHIEUCHAMCONG
 FOR EACH ROW
 DECLARE
-    My_date date;
+    D_CURRENT date;
     max_date int; 
 BEGIN
-    Select THOIGIANCHAMCONG into My_date From PhieuChamCong;
-    max_date := EXTRACT(DAY FROM(LAST_DAY(My_date)));
-    IF (:new.SoNgayCong < 0 or :new.SoNgayCong > max_date)
-    THEN
-        DBMS_OUTPUT.PUT_LINE('So ngay cong khong phu  hop');
+    D_CURRENT:= :NEW.THOIGIANCHAMCONG; 
+    max_date := EXTRACT(DAY FROM(LAST_DAY(D_CURRENT)));
+    
+    IF(:NEW.SONGAYCONG > MAX_DATE OR :NEW.SONGAYCONG < 0) THEN
+        DBMS_OUTPUT.PUT_LINE('So ngay cong hop le');
     END IF;     
 END;
 /
@@ -449,18 +450,3 @@ AS
         EXECUTE IMMEDIATE grant_opt_statement;
     end if;
 END;
-
-
-
---- adjust database
-alter table BOPHAN
-modify TenBoPhan varchar2(100);
-
-ALTER TABLE NHANVIEN
-DROP COLUMN CHUCVU;
-
-ALTER TABLE NHANVIEN
-ADD NV_USERNAME varchar2(20);
-
---- drop trigger
-drop trigger CHAMCONG_SONGAYCONG;
