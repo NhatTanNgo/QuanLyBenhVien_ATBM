@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Doctor\GUI_DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI_LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
+      <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI_LoginWindow.xaml.cs">
       <DependentUpon>GUI_LoginWindow.xaml</DependentUpon>
@@ -117,6 +124,10 @@
       <Project>{bea5f062-edb3-490f-bfbd-367c01b0e2eb}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reception\" />
+    <Folder Include="ResourceManagement\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
