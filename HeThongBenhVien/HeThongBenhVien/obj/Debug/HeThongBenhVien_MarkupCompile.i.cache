@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Study\An toan bao mat HTTT\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\App.xaml
-10426330664
+15-309516199
 
-15-1274136840
+201899302467
 17-550141854
-Doctor\GUI_DoctorWindow.xaml;FinanceManagement\GUI_FinManageWindow.xaml;FinanceManagement\GUI_FinStaffsPage.xaml;FinanceManagement\GUI_ServicePage.xaml;GUI_LoginWindow.xaml;MainWindow.xaml;ResourceManagement\GUI_HumanPage.xaml;ResourceManagement\GUI_ResManageWindow.xaml;ResourceManagement\GUI_RoomPage.xaml;ResourceManagement\GUI_SchedulePage.xaml;
+Doctor\GUI_DoctorWindow.xaml;ExpertiseManagement\GUI_ExpertisePage.xaml;ExpertiseManagement\GUI_ExpManageWindow.xaml;FinanceManagement\GUI_FinManageWindow.xaml;FinanceManagement\GUI_FinStaffsPage.xaml;FinanceManagement\GUI_ServicePage.xaml;GUI_LoginWindow.xaml;MainWindow.xaml;Reception\GUI_AddProfile.xaml;Reception\GUI_ManageProfile.xaml;Reception\GUI_ReceptionWindow.xaml;ResourceManagement\GUI_HumanPage.xaml;ResourceManagement\GUI_ResManageWindow.xaml;ResourceManagement\GUI_RoomPage.xaml;ResourceManagement\GUI_SchedulePage.xaml;
 
 True
 

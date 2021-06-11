@@ -61,6 +61,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ExpertiseManagement\GUI_ExpertisePage.xaml.cs">
+      <DependentUpon>GUI_ExpertisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertiseManagement\GUI_ExpManageWindow.xaml.cs">
+      <DependentUpon>GUI_ExpManageWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FinanceManagement\GUI_FinManageWindow.xaml.cs">
       <DependentUpon>GUI_FinManageWindow.xaml</DependentUpon>
     </Compile>
@@ -69,6 +75,15 @@
     </Compile>
     <Compile Include="FinanceManagement\GUI_ServicePage.xaml.cs">
       <DependentUpon>GUI_ServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_AddProfile.xaml.cs">
+      <DependentUpon>GUI_AddProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_ManageProfile.xaml.cs">
+      <DependentUpon>GUI_ManageProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_ReceptionWindow.xaml.cs">
+      <DependentUpon>GUI_ReceptionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ResourceManagement\GUI_HumanPage.xaml.cs">
       <DependentUpon>GUI_HumanPage.xaml</DependentUpon>
@@ -83,6 +98,14 @@
       <DependentUpon>GUI_SchedulePage.xaml</DependentUpon>
     </Compile>
     <Page Include="Doctor\GUI_DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpertiseManagement\GUI_ExpertisePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpertiseManagement\GUI_ExpManageWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,6 +143,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Reception\GUI_AddProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reception\GUI_ManageProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reception\GUI_ReceptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceManagement\GUI_HumanPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,9 +209,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reception\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="avatar.png" />
   </ItemGroup>
