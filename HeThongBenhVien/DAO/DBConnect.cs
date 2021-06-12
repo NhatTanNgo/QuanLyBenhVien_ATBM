@@ -9,7 +9,8 @@ namespace DAO
 {
     public class DBConnect
     {
-        protected static OracleConnection _conn = null;
+        //protected static OracleConnection _conn = null;
+        protected static OracleConnection _conn = new OracleConnection("Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID = OT; Password= minhlamv18");
         protected static String _username = null;
 
         //Data Source = IP:Port/Database name (SID)
@@ -17,7 +18,8 @@ namespace DAO
         //Password = password
         public static void InitConnection(String username, String password, String dbName)
         {
-            String connectionString = $"Data Source=localhost:1521/{dbName};Persist Security Info=True;User ID = {username}; Password={password}";
+            //String connectionString = $"Data Source=localhost:1521/{dbName};Persist Security Info=True;User ID = {username}; Password={password}";
+            String connectionString = $"Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID = OT; Password= minhlamv18";
 
             OracleConnection connection = null;
             try

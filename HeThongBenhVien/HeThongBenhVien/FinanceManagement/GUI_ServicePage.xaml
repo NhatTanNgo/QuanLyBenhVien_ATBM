@@ -22,6 +22,7 @@
                     Click="RefreshButton_Click"
                     Margin="10 5"
                     HorizontalAlignment="Stretch"/>
+
                 <Button x:Name="SaveButton" 
                     Content="Lưu lại"
                     Click="SaveButton_Click"
@@ -34,11 +35,17 @@
 
             <DataGrid Grid.Column="1"
                   x:Name="ServiceDataGrid"
+                  CanUserAddRows="True"
+                  CanUserDeleteRows="True"
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Mã Phòng"/>
-                    <DataGridTextColumn Header="Tên Phòng Khám"/>
+                    <DataGridTextColumn Header="Mã dịch vụ" IsReadOnly="True"
+                                        Binding="{Binding MaDichVu}"/>
+                    <DataGridTextColumn Header="Tên dịch vụ"
+                                        Binding="{Binding TenDichVu, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Giá dịch vụ"
+                                        Binding="{Binding GiaTien, Mode=TwoWay}"/>
                 </DataGrid.Columns>
 
             </DataGrid>

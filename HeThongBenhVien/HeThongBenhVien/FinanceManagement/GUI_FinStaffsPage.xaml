@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:HeThongBenhVien.FinanceManagement"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1024"
-      Title="GUI_FinStaffsPage">
+      Title="GUI_FinStaffsPage"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid>
@@ -30,8 +31,14 @@
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Mã Phòng"/>
-                    <DataGridTextColumn Header="Tên Phòng Khám"/>
+                    <DataGridTextColumn Header="Mã nhân viên"
+                                        Binding="{Binding MaNhanVien, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Họ tên"
+                                        Binding="{Binding HoTen, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Email"
+                                        Binding="{Binding Email, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="SĐT"
+                                        Binding="{Binding SDT, Mode=OneWay}"/>
                 </DataGrid.Columns>
 
             </DataGrid>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,10 +29,27 @@ namespace HeThongBenhVien.FinanceManagement
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-
+            LoadServiceInfor();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadServiceInfor()
+        {
+            List<DTO_DichVu> serviceInfor = BUS_DichVu.Instance.GetServiceInfor();
+            ServiceDataGrid.AutoGenerateColumns = false;
+            ServiceDataGrid.ItemsSource = serviceInfor;
+        }
+
+        private void AddServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void DelServiceButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +27,23 @@ namespace HeThongBenhVien.FinanceManagement
             InitializeComponent();
         }
 
+        private List<DTO_NhanVien> finStaffList = null;
+
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
+            LoadFinStaffs();
+        }
 
+        private void LoadFinStaffs()
+        {
+            finStaffList = BUS_NhanVien.Instance.GetFinanceEmployees();
+            FinStaffsDataGrid.AutoGenerateColumns = false;
+            FinStaffsDataGrid.ItemsSource = finStaffList;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadFinStaffs();
         }
     }
 }
