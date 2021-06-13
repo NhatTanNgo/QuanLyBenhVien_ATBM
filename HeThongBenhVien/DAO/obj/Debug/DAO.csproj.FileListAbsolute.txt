@@ -1,0 +1,9 @@
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.dll.config
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.pdb
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.pdb

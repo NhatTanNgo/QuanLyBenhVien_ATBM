@@ -61,6 +61,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Doctor\GUI_DoctorMedicalRecord.xaml.cs">
+      <DependentUpon>GUI_DoctorMedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
+      <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ExpertiseManagement\GUI_ExpertisePage.xaml.cs">
       <DependentUpon>GUI_ExpertisePage.xaml</DependentUpon>
     </Compile>
@@ -97,6 +103,10 @@
     <Compile Include="ResourceManagement\GUI_SchedulePage.xaml.cs">
       <DependentUpon>GUI_SchedulePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Doctor\GUI_DoctorMedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Doctor\GUI_DoctorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,9 +142,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
-      <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI_LoginWindow.xaml.cs">
       <DependentUpon>GUI_LoginWindow.xaml</DependentUpon>
