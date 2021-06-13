@@ -9,6 +9,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using HandyControl.Controls;
+using HandyControl.Data;
+using HandyControl.Expression.Media;
+using HandyControl.Expression.Shapes;
+using HandyControl.Interactivity;
+using HandyControl.Media.Animation;
+using HandyControl.Media.Effects;
+using HandyControl.Properties.Langs;
+using HandyControl.Themes;
+using HandyControl.Tools;
+using HandyControl.Tools.Converter;
+using HandyControl.Tools.Extension;
 using HeThongBenhVien.FinanceManagement;
 using System;
 using System.Diagnostics;
@@ -41,7 +53,7 @@ namespace HeThongBenhVien.FinanceManagement {
     public partial class GUI_FinManageWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 16 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 17 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid MenuTab;
         
@@ -49,7 +61,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 27 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 28 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ManageFinStaffButton;
         
@@ -57,7 +69,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 38 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 39 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ManageServiceButton;
         
@@ -65,7 +77,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 49 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 50 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button OtherButton;
         
@@ -73,7 +85,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 68 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 69 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Media.ImageBrush AvatarIcon;
         
@@ -81,7 +93,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 73 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 74 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock LoginUsernameTextBlock;
         
@@ -89,7 +101,7 @@ namespace HeThongBenhVien.FinanceManagement {
         #line hidden
         
         
-        #line 82 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+        #line 83 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Frame MainFrame;
         
@@ -128,7 +140,7 @@ namespace HeThongBenhVien.FinanceManagement {
             {
             case 1:
             
-            #line 9 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+            #line 10 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
             ((HeThongBenhVien.FinanceManagement.GUI_FinManageWindow)(target)).Loaded += new System.Windows.RoutedEventHandler(this.Window_Loaded);
             
             #line default
@@ -140,7 +152,7 @@ namespace HeThongBenhVien.FinanceManagement {
             case 3:
             this.ManageFinStaffButton = ((System.Windows.Controls.Button)(target));
             
-            #line 34 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+            #line 35 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
             this.ManageFinStaffButton.Click += new System.Windows.RoutedEventHandler(this.ManageFinStaffButton_Click);
             
             #line default
@@ -149,7 +161,7 @@ namespace HeThongBenhVien.FinanceManagement {
             case 4:
             this.ManageServiceButton = ((System.Windows.Controls.Button)(target));
             
-            #line 46 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+            #line 47 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
             this.ManageServiceButton.Click += new System.Windows.RoutedEventHandler(this.ManageServiceButton_Click);
             
             #line default
@@ -158,7 +170,7 @@ namespace HeThongBenhVien.FinanceManagement {
             case 5:
             this.OtherButton = ((System.Windows.Controls.Button)(target));
             
-            #line 57 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
+            #line 58 "..\..\..\FinanceManagement\GUI_FinManageWindow.xaml"
             this.OtherButton.Click += new System.Windows.RoutedEventHandler(this.OtherButton_Click);
             
             #line default

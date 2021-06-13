@@ -29,5 +29,15 @@ namespace HeThongBenhVien.Doctor
         {
 
         }
+
+        private void TextBox_TextChanged_1()
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

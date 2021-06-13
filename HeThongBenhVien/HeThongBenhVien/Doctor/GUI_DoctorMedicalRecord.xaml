@@ -10,7 +10,74 @@
     <Grid>
         <Grid  Background="WhiteSmoke">
             <Button Content="TRỞ VỀ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-
+            <Grid HorizontalAlignment="Left" Height="32" Margin="235,10,0,0" VerticalAlignment="Top" Width="352">
+                <TextBlock FontWeight="Bold" FontFamily="University" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" FontSize="20" Text="BỆNH ÁN BỆNH NHÂN"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="35" Margin="106,42,0,0" VerticalAlignment="Top" Width="458"/>
+            <TextBlock HorizontalAlignment="Left" Height="22" Margin="194,49,0,0" TextWrapping="Wrap" Text="Mã phiếu khám: " VerticalAlignment="Top" Width="99"/>
+            <TextBox HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="abc123" VerticalAlignment="Top" Width="179"/>
+            <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="77" Height="33" Click="Button_Click"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="284" Margin="56,78,0,0" VerticalAlignment="Top" Width="431" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Mã bệnh nhân:"/>
+                    <TextBox x:Name="MaBN" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5" 
+                           HorizontalAlignment="Right" Text="18120545"/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Tên bệnh nhân:"/>
+                    <TextBox x:Name="TenBN" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5" 
+                           HorizontalAlignment="Right" Text="Vũ Phan Nhật Tài"/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Ngày khám:"/>
+                    <TextBox x:Name="NgayKham" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5" 
+                           HorizontalAlignment="Right" Text="01/12/2021"/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Triệu chứng:"/>
+                    <TextBox x:Name="TrieuChung" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5"  TextWrapping="Wrap"
+                           HorizontalAlignment="Right" Text="Bình thường"/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Giới tính:"/>
+                    <!--<ToggleButton 
+                                  Width="100" Foreground="Black" Background="Transparent" Margin="5 5 8 5" 
+                                  FontWeight="Bold" FontSize="24" HorizontalAlignment="Right">
+                                            <ToggleButton.Content>
+                                                <TextBlock>Nam</TextBlock>
+                                            </ToggleButton.Content>
+                                            <materialDesign:ToggleButtonAssist.OnContent>
+                                                <TextBlock>Nữ</TextBlock>
+                                            </materialDesign:ToggleButtonAssist.OnContent>
+                                        </ToggleButton>-->
+                    <TextBox x:Name="GioiTinhBN" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5"  TextWrapping="Wrap"
+                           HorizontalAlignment="Right" Text=""/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Ngày sinh:"/>
+                    <TextBox x:Name="NgaySinh" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5" 
+                           HorizontalAlignment="Right" Text="01/12/2000"/>
+                    <TextBlock FontFamily="Arial" Foreground="Black"
+                           VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
+                           Text="Chẩn đoán:"/>
+                    <TextBox x:Name="ChanDoan" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
+                           VerticalAlignment="Top" FontSize="20" Margin="5 5 8 5"  TextWrapping="Wrap"
+                           HorizontalAlignment="Right" Text="Covi"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Button Content="Lập toa thuốc" HorizontalAlignment="Left" Margin="56,386,0,0" VerticalAlignment="Top" Width="109" Height="38"/>
+            <Button Content="Tạo bệnh án" HorizontalAlignment="Left" Margin="194,386,0,0" VerticalAlignment="Top" Width="99" Height="38"/>
+            <Button Content="Chọn dịch vụ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="333,386,0,0" Height="38"/>
 
         </Grid>
     </Grid>
