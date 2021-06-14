@@ -88,6 +88,12 @@
     <Compile Include="FinanceManagement\GUI_ServicePage.xaml.cs">
       <DependentUpon>GUI_ServicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FinanceStaff\GUI_FinStaffWindow.xaml.cs">
+      <DependentUpon>GUI_FinStaffWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacySeller\GUI_PharmaSellerWindow.xaml.cs">
+      <DependentUpon>GUI_PharmaSellerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reception\GUI_AddProfile.xaml.cs">
       <DependentUpon>GUI_AddProfile.xaml</DependentUpon>
     </Compile>
@@ -145,6 +151,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FinanceStaff\GUI_FinStaffWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI_LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,6 +174,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PharmacySeller\GUI_PharmaSellerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reception\GUI_AddProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -230,7 +244,9 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Accountant\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="avatar.png" />
   </ItemGroup>
