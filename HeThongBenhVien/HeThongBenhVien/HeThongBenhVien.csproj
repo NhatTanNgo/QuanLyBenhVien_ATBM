@@ -64,6 +64,12 @@
     <Compile Include="Doctor\GUI_DoctorMedicalRecord.xaml.cs">
       <DependentUpon>GUI_DoctorMedicalRecord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Doctor\GUI_DoctorPrescription.xaml.cs">
+      <DependentUpon>GUI_DoctorPrescription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorServices.xaml.cs">
+      <DependentUpon>GUI_DoctorServices.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
       <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,14 @@
       <DependentUpon>GUI_SchedulePage.xaml</DependentUpon>
     </Compile>
     <Page Include="Doctor\GUI_DoctorMedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Doctor\GUI_DoctorPrescription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Doctor\GUI_DoctorServices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

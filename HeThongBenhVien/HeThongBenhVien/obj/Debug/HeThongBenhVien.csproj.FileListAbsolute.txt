@@ -64,3 +64,7 @@ D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongB
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorMedicalRecord.baml
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorWindow.g.cs
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorWindow.baml
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorPrescription.g.cs
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorServices.g.cs
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorPrescription.baml
+D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\obj\Debug\Doctor\GUI_DoctorServices.baml
