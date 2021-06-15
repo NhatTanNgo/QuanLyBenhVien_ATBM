@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\HeThongBenhVien\App.xaml
-18-1747223271
+20-377161487
 
-22-1861452276
+25-207980408
 172058359808
-Doctor\GUI_DoctorMedicalRecord.xaml;Doctor\GUI_DoctorPrescription.xaml;Doctor\GUI_DoctorServices.xaml;Doctor\GUI_DoctorWindow.xaml;ExpertiseManagement\GUI_ExpertisePage.xaml;ExpertiseManagement\GUI_ExpManageWindow.xaml;FinanceManagement\GUI_FinManageWindow.xaml;FinanceManagement\GUI_FinStaffsPage.xaml;FinanceManagement\GUI_ServicePage.xaml;GUI_LoginWindow.xaml;MainWindow.xaml;Reception\GUI_AddProfile.xaml;Reception\GUI_ManageProfile.xaml;Reception\GUI_ReceptionWindow.xaml;ResourceManagement\GUI_HumanPage.xaml;ResourceManagement\GUI_ResManageWindow.xaml;ResourceManagement\GUI_RoomPage.xaml;ResourceManagement\GUI_SchedulePage.xaml;
+Doctor\GUI_DoctorMedicalRecord.xaml;Doctor\GUI_DoctorPrescription.xaml;Doctor\GUI_DoctorServices.xaml;Doctor\GUI_DoctorWindow.xaml;ExpertiseManagement\GUI_ExpertisePage.xaml;ExpertiseManagement\GUI_ExpManageWindow.xaml;FinanceManagement\GUI_FinManageWindow.xaml;FinanceManagement\GUI_FinStaffsPage.xaml;FinanceManagement\GUI_ServicePage.xaml;FinanceStaff\GUI_FinStaffWindow.xaml;GUI_LoginWindow.xaml;MainWindow.xaml;PharmacySeller\GUI_PharmaSellerWindow.xaml;Reception\GUI_AddProfile.xaml;Reception\GUI_ManageProfile.xaml;Reception\GUI_ReceptionWindow.xaml;ResourceManagement\GUI_HumanPage.xaml;ResourceManagement\GUI_ResManageWindow.xaml;ResourceManagement\GUI_RoomPage.xaml;ResourceManagement\GUI_SchedulePage.xaml;
 
-False
+True
 
