@@ -15,7 +15,7 @@
                        HorizontalAlignment="Center" FontSize="20" Text="TOA THUỐC"/>
             </Grid>
             <Grid HorizontalAlignment="Left" Height="35" Margin="106,42,0,0" VerticalAlignment="Top" Width="458"/>
-            <TextBlock HorizontalAlignment="Left" Height="22" Margin="194,49,0,0" TextWrapping="Wrap" Text="Mã bệnh nhân: " VerticalAlignment="Top" Width="99"/>
+            <TextBlock HorizontalAlignment="Left" Height="22" Margin="194,49,0,0" TextWrapping="Wrap" Text="Mã phiếu khám: " VerticalAlignment="Top" Width="99"/>
             <TextBox HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="abc123" VerticalAlignment="Top" Width="179"/>
             <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="77" Height="33" />
             <ScrollViewer HorizontalAlignment="Left" Height="284" Margin="56,78,0,0" VerticalAlignment="Top" Width="370" VerticalScrollBarVisibility="Auto">
