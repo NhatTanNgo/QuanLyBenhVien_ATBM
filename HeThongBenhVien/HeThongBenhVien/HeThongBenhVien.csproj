@@ -91,6 +91,18 @@
     <Compile Include="FinanceStaff\GUI_FinStaffWindow.xaml.cs">
       <DependentUpon>GUI_FinStaffWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainDemo\DAC_ServiceView.xaml.cs">
+      <DependentUpon>DAC_ServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\RBAC_View.xaml.cs">
+      <DependentUpon>RBAC_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\VPD_MedicalRecord.xaml.cs">
+      <DependentUpon>VPD_MedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\VPD_View.xaml.cs">
+      <DependentUpon>VPD_View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PharmacySeller\GUI_PharmaSellerWindow.xaml.cs">
       <DependentUpon>GUI_PharmaSellerWindow.xaml</DependentUpon>
     </Compile>
@@ -156,6 +168,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI_LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_ServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\RBAC_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_MedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
