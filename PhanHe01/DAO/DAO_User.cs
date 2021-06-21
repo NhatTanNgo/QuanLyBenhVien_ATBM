@@ -32,6 +32,10 @@ namespace DAO
             {
                 _conn.Open();
                 command.ExecuteNonQuery();
+                command.CommandText = $"GRANT CONNECT TO {username}";
+                command.ExecuteNonQuery();
+                command.CommandText = $"COMMIT";
+                command.ExecuteNonQuery();
                 _conn.Close();
             }
             catch(OracleException ex)

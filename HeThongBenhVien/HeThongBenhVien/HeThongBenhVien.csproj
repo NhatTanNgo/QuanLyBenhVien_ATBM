@@ -94,6 +94,12 @@
     <Compile Include="MainDemo\DAC_ServiceView.xaml.cs">
       <DependentUpon>DAC_ServiceView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainDemo\Encrypt_InsertMedicalRecord.xaml.cs">
+      <DependentUpon>Encrypt_InsertMedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\Encrypt_View.xaml.cs">
+      <DependentUpon>Encrypt_View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainDemo\RBAC_View.xaml.cs">
       <DependentUpon>RBAC_View.xaml</DependentUpon>
     </Compile>
@@ -172,6 +178,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainDemo\DAC_ServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\Encrypt_InsertMedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\Encrypt_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

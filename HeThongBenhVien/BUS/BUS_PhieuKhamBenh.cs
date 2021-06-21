@@ -37,11 +37,17 @@ namespace BUS
                 tmpObject.NgayKham = row["NGAYKHAM"].ToString();
                 tmpObject.TrieuChung = row["TRIEUCHUNG"].ToString();
                 tmpObject.KetLuanCuaBacSi = row["KETLUANCUABACSI"].ToString();
+                tmpObject.MaBenhNhan = row["MABENHNHAN"].ToString();
+                tmpObject.MaBacSi = row["MANHANVIEN"].ToString();
 
                 result.Add(tmpObject);
             }
-
             return result;
+        }
+
+        public void InsertMedicalRecord()
+        {
+
         }
     }
 }
