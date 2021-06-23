@@ -21,7 +21,7 @@ namespace BUS
             }
         }
 
-        public String RandomString (int size)
+        public static String RandomString (int size)
         {
             var builder = new StringBuilder(size);
             const String alphabet = "abcdefghijklmnoprstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

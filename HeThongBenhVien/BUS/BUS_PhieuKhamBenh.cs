@@ -34,9 +34,13 @@ namespace BUS
                 DTO_PhieuKhamBenh tmpObject = new DTO_PhieuKhamBenh();
 
                 tmpObject.MaKhamBenh = row["MAKHAMBENH"].ToString();
-                tmpObject.NgayKham = row["NGAYKHAM"].ToString();
-                tmpObject.TrieuChung = row["TRIEUCHUNG"].ToString();
-                tmpObject.KetLuanCuaBacSi = row["KETLUANCUABACSI"].ToString();
+
+                DateTime date = DateTime.Parse(row["NGAYKHAM"].ToString());
+                tmpObject.NgayKham = date.ToString("dd/MM/yyyy");
+
+                tmpObject.TrieuChung = Crypto.Decryption(row["TRIEUCHUNG"].ToString(), Crypto.CryptoKey);
+                tmpObject.KetLuanCuaBacSi = Crypto.Decryption(row["KETLUANCUABACSI"].ToString(), Crypto.CryptoKey);
+
                 tmpObject.MaBenhNhan = row["MABENHNHAN"].ToString();
                 tmpObject.MaBacSi = row["MANHANVIEN"].ToString();
 
@@ -45,9 +49,16 @@ namespace BUS
             return result;
         }
 
-        public void InsertMedicalRecord()
+        public void InsertMedicalRecord(DTO_PhieuKhamBenh medicalRecord)
         {
+            //Encrypt
+            String cypherSymptoms = Crypto.Encryption(medicalRecord.TrieuChung, Crypto.CryptoKey);
+            String cypherDiagnose = Crypto.Encryption(medicalRecord.KetLuanCuaBacSi, Crypto.CryptoKey);
 
+            medicalRecord.TrieuChung = cypherSymptoms;
+            medicalRecord.KetLuanCuaBacSi = cypherDiagnose;
+
+            DAO_PhieuKhamBenh.Instance.InsertMedicalRecord(medicalRecord);
         }
     }
 }

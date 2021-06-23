@@ -37,5 +37,20 @@ namespace DAO
             _conn.Close();
             return dataTable;
         }
+
+        public DataTable GetEmployees()
+        {
+            _conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandText = $"select n.manhanvien, n.hoten, n.sdt, n.diachi, n.email, n.dob, n.luongcoban, n.phucap, t.tenbophan " +
+                                    "from ot.nhanvien n, ot.bophan t where t.mabophan = n.mabophan";
+            command.Connection = _conn;
+
+            OracleDataAdapter adapter = new OracleDataAdapter(command);
+            DataTable dataTable = new DataTable(); //create a new table
+            adapter.Fill(dataTable);
+            _conn.Close();
+            return dataTable;
+        }
     }
 }

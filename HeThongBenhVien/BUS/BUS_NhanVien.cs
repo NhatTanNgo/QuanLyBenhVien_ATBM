@@ -54,5 +54,33 @@ namespace BUS
 
             return result;
         }
+
+        public List<DTO_NhanVien> GetEmployees()
+        {
+            //Get all data from DAO Layer
+            List<DTO_NhanVien> result = new List<DTO_NhanVien>();
+            DataTable data = DAO_NhanVien.Instance.GetEmployees();
+
+            foreach (DataRow row in data.Rows)
+            {
+                DTO_NhanVien tmpObject = new DTO_NhanVien();
+
+                tmpObject.MaNhanVien = row["MANHANVIEN"].ToString();
+                tmpObject.HoTen = row["HOTEN"].ToString();
+                tmpObject.SDT = row["SDT"].ToString();
+                tmpObject.DiaChi = row["DIACHI"].ToString();
+                tmpObject.Email = row["EMAIL"].ToString();
+
+                DateTime date = DateTime.Parse(row["DOB"].ToString());
+                tmpObject.DOB = date.ToString("dd/MM/yyyy");
+                tmpObject.LuongCoBan = double.Parse(row["LUONGCOBAN"].ToString());
+                tmpObject.PhuCap = double.Parse(row["LUONGCOBAN"].ToString());
+                tmpObject.BoPhan = row["TENBOPHAN"].ToString();
+
+                result.Add(tmpObject);
+            }
+
+            return result;
+        }
     }
 }

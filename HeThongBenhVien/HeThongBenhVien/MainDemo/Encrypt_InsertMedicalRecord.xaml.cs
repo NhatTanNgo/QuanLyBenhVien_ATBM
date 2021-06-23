@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,8 +36,31 @@ namespace HeThongBenhVien.MainDemo
             medicalRecord.MaBacSi = txtbox_doctorID.Text;
             medicalRecord.TrieuChung = txtbox_symptompsID.Text;
             medicalRecord.KetLuanCuaBacSi = txtbox_diagnoseID.Text;
+            medicalRecord.NgayKham = DateTime.Now.ToString("dd/MM/yyyy");
 
             //Call BUS to do encrypt
+            try
+            {
+                BUS_PhieuKhamBenh.Instance.InsertMedicalRecord(medicalRecord);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+                return;
+            }
+
+            InsertSuccessfully();
+        }
+
+        private void InsertSuccessfully()
+        {
+            txtbox_medicalRecordID.Text = string.Empty;
+            txtbox_doctorID.Text = string.Empty;
+            txtbox_diagnoseID.Text = string.Empty;
+            txtbox_patientID.Text = string.Empty;
+            txtbox_symptompsID.Text = string.Empty;
+
+            MessageBox.Show("Insert Successfully!");
         }
     }
 }

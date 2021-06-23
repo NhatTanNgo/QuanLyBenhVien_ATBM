@@ -29,6 +29,7 @@ namespace HeThongBenhVien
         private MainDemo.RBAC_View rbacPage = null;
         private MainDemo.VPD_View vpdPage = null;
         private MainDemo.Encrypt_View encryptPage = null;
+        private MainDemo.OLS_View olsPage = null;
         public MainWindow(String username)
         {
             InitializeComponent();
@@ -65,7 +66,12 @@ namespace HeThongBenhVien
             VPDButton.Background = Brushes.LightGray;
             EncrytionButton.Background = Brushes.LightGray;
             OLSButton.Background = Brushes.White;
-            //MainFrame.Navigate(null);
+            
+            if(olsPage == null)
+            {
+                olsPage = new MainDemo.OLS_View();
+            }
+            MainFrame.Navigate(olsPage);
         }
 
         private void EncryptionButton_Click(object sender, RoutedEventArgs e)
