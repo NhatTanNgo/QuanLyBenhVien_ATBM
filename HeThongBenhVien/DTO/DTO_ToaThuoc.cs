@@ -9,7 +9,7 @@ namespace DTO
     public class DTO_ToaThuoc
     {
         public String MaDonThuoc { get; set; }
-        public DateTime NgayLapDon { get; set; }
+        public String NgayLapDon { get; set; }
         public double TongTien { get; set; }
     }
 }

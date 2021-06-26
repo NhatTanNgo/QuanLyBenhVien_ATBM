@@ -9,7 +9,7 @@ using DAO;
 
 namespace BUS
 {
-    class BUS_PhieuChamCong
+    public class BUS_PhieuChamCong
     {
         private static BUS_PhieuChamCong _instance = null;
         public static BUS_PhieuChamCong Instance
@@ -23,5 +23,25 @@ namespace BUS
                 return _instance;
             }
         }
+        public List<DTO_PhieuChamCong> GetTimeSheets()
+        {
+            List<DTO_PhieuChamCong> result = new List<DTO_PhieuChamCong>();
+            DataTable data = DAO_PhieuChamCong.Instance.GetTimeSheets();
+
+            foreach (DataRow row in data.Rows)
+            {
+                DTO_PhieuChamCong tmpObject = new DTO_PhieuChamCong();
+                DateTime date = DateTime.Parse(row["THOIGIAN"].ToString());
+                tmpObject.ThoiGian = date.ToString("dd/MM/yyyy");
+
+                tmpObject.SoNgayCong = int.Parse(row["SONGAYCONG"].ToString());
+                tmpObject.TienLuong = double.Parse(row["SONGAYCONG"].ToString());
+
+                result.Add(tmpObject);
+            }
+            return result;
+        }
+
     }
+
 }

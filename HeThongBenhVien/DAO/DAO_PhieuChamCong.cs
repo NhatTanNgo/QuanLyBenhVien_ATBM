@@ -9,7 +9,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace DAO
 {
-    class DAO_PhieuChamCong : DBConnect
+    public class DAO_PhieuChamCong : DBConnect
     {
         private static DAO_PhieuChamCong _instance = null;
         public static DAO_PhieuChamCong Instance
@@ -23,7 +23,7 @@ namespace DAO
                 return _instance;
             }
         }
-        public DataTable GetTimeSheet()
+        public DataTable GetTimeSheets()
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();

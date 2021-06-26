@@ -8,7 +8,7 @@ namespace DTO
 {
     public class DTO_PhieuChamCong
     {
-        public DateTime ThoiGian { get; set; }
+        public String ThoiGian { get; set; }
         public int SoNgayCong { get; set; }
         public double TienLuong { get; set; }
 

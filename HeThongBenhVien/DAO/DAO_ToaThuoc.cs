@@ -9,7 +9,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace DAO
 {
-    class DAO_ToaThuoc : DBConnect
+    public class DAO_ToaThuoc : DBConnect
     {
         private static DAO_ToaThuoc _instance = null;
         public static DAO_ToaThuoc Instance
