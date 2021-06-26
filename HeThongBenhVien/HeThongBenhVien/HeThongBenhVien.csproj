@@ -109,6 +109,9 @@
     <Compile Include="MainDemo\VPD_MedicalRecord.xaml.cs">
       <DependentUpon>VPD_MedicalRecord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainDemo\VPD_TimeSheet.xaml.cs">
+      <DependentUpon>VPD_TimeSheet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainDemo\VPD_View.xaml.cs">
       <DependentUpon>VPD_View.xaml</DependentUpon>
     </Compile>
@@ -201,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainDemo\VPD_MedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_TimeSheet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

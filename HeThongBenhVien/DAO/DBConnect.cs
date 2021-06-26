@@ -10,7 +10,7 @@ namespace DAO
     public class DBConnect
     {
         //protected static OracleConnection _conn = null;
-        protected static OracleConnection _conn = new OracleConnection("Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID = OT; Password= minhlamv18");
+        protected static OracleConnection _conn = new OracleConnection("Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID = OT; Password= 123");
         protected static String _username = null;
 
         //Data Source = IP:Port/Database name (SID)
