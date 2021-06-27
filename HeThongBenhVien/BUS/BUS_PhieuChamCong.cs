@@ -31,11 +31,12 @@ namespace BUS
             foreach (DataRow row in data.Rows)
             {
                 DTO_PhieuChamCong tmpObject = new DTO_PhieuChamCong();
-                DateTime date = DateTime.Parse(row["THOIGIAN"].ToString());
+                tmpObject.MaNhanVien = row["MANHANVIEN"].ToString();
+                DateTime date = DateTime.Parse(row["THOIGIANCHAMCONG"].ToString());
                 tmpObject.ThoiGian = date.ToString("dd/MM/yyyy");
 
                 tmpObject.SoNgayCong = int.Parse(row["SONGAYCONG"].ToString());
-                tmpObject.TienLuong = double.Parse(row["SONGAYCONG"].ToString());
+                tmpObject.TienLuong = double.Parse(row["TIENLUONG"].ToString());
 
                 result.Add(tmpObject);
             }

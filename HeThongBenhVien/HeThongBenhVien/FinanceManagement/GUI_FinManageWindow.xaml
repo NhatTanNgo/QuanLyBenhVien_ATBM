@@ -47,16 +47,7 @@
                     Click="ManageServiceButton_Click"
                     Margin="20 0 0 0"/>
 
-            <Button x:Name="OtherButton"
-                    Grid.Column="2"
-                    Style="{StaticResource ButtonPrimary}"
-                    VerticalAlignment="Stretch"
-                    Content="Khác"
-                    Foreground="Black"
-                    FontSize= "15"
-                    Background="Transparent"
-                    Click="OtherButton_Click"
-                    Margin="20 0 0 0"/>
+            
         </Grid>
 
         <StackPanel Grid.Row="0"

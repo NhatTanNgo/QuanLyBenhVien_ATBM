@@ -27,7 +27,7 @@
                     Margin="10 5"
                     HorizontalAlignment="Stretch"/>
         </StackPanel>
-        <DataGrid x:Name="medicalRecord_grid"
+        <DataGrid x:Name="timeSheets_grid"
                   Grid.Row="1"
                   AutoGenerateColumns="True"/>
     </Grid>

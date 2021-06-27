@@ -27,7 +27,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from ot.phieuchamcong";
+            command.CommandText = $"select * from {_dbSchema}.phieuchamcong";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -38,7 +38,7 @@ namespace DAO
         }
         public void InsertTimeSheet(DTO_PhieuChamCong TimeSheet)
         {
-            OracleCommand command = new OracleCommand("OT.INSERT_PCC", _conn);
+            OracleCommand command = new OracleCommand($"{_dbSchema}.INSERT_PCC", _conn);
             command.CommandType = CommandType.StoredProcedure;
 
             OracleParameter param1 = new OracleParameter("I_THOIGIAN", OracleDbType.Varchar2);

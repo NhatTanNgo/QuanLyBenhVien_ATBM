@@ -23,20 +23,12 @@
                     Margin="10 5"
                     HorizontalAlignment="Stretch"/>
 
-                <Button x:Name="SaveButton" 
-                    Content="Lưu lại"
-                    Click="SaveButton_Click"
-                    Background="Gray"
-                    Foreground="Red"
-                    Margin="10 5"
-                    HorizontalAlignment="Stretch"/>
-
             </StackPanel>
 
             <DataGrid Grid.Column="1"
                   x:Name="ServiceDataGrid"
-                  CanUserAddRows="True"
-                  CanUserDeleteRows="True"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <DataGrid.Columns>

@@ -27,7 +27,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from ot.dichvu";
+            command.CommandText = $"select * from {_dbSchema}.dichvu";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);

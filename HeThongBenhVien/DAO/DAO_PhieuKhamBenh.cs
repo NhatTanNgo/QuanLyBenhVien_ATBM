@@ -28,7 +28,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from ot.phieukhambenh";
+            command.CommandText = $"select * from {_dbSchema}.phieukhambenh";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -45,7 +45,7 @@ namespace DAO
             //                                       $"'{medicalRecord.KetLuanCuaBacSi}', '{medicalRecord.MaBenhNhan}', '{medicalRecord.MaBacSi}'); end;";
             //command.Connection = _conn;
             
-            OracleCommand command = new OracleCommand("OT.INSERT_PKB", _conn);
+            OracleCommand command = new OracleCommand($"{_dbSchema}.INSERT_PKB", _conn);
             command.CommandType = CommandType.StoredProcedure;
 
             OracleParameter param1 = new OracleParameter("I_MAKHAMBENH", OracleDbType.Varchar2);

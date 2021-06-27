@@ -50,7 +50,7 @@ namespace HeThongBenhVien.FinanceManagement
             tabSelection = 0;
             ManageServiceButton.Background = Brushes.LightGray;
             ManageFinStaffButton.Background = Brushes.White;
-            OtherButton.Background = Brushes.LightGray;
+            //OtherButton.Background = Brushes.LightGray;
             MainFrame.Navigate(finStaffsPage);
         }
 
@@ -64,7 +64,7 @@ namespace HeThongBenhVien.FinanceManagement
             tabSelection = 1;
             ManageServiceButton.Background = Brushes.White;
             ManageFinStaffButton.Background = Brushes.LightGray;
-            OtherButton.Background = Brushes.LightGray;
+            //OtherButton.Background = Brushes.LightGray;
             MainFrame.Navigate(servicePage);
         }
 
@@ -73,7 +73,7 @@ namespace HeThongBenhVien.FinanceManagement
             tabSelection = 0;
             ManageServiceButton.Background = Brushes.LightGray;
             ManageFinStaffButton.Background = Brushes.White;
-            OtherButton.Background = Brushes.LightGray;
+            //OtherButton.Background = Brushes.LightGray;
             MainFrame.Navigate(finStaffsPage);
             LoginUsernameTextBlock.Text = "Hello " + username.ToUpper();
         }

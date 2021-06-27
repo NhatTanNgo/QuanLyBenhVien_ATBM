@@ -33,9 +33,9 @@ namespace HeThongBenhVien.MainDemo
 
         private void LoadTimeSheets()
         {
-            List<DTO_PhieuChamCong> medicalRecords = BUS_PhieuChamCong.Instance.GetTimeSheets();
+            List<DTO_PhieuChamCong> timeSheets = BUS_PhieuChamCong.Instance.GetTimeSheets();
 
-            medicalRecord_grid.ItemsSource = medicalRecords;
+            timeSheets_grid.ItemsSource = timeSheets;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

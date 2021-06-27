@@ -27,7 +27,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from ot.toathuoc";
+            command.CommandText = $"select * from {_dbSchema}.toathuoc";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -40,7 +40,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from ot.toathuoc where MaKhamBenh = {MaKhamBenh}";
+            command.CommandText = $"select * from {_dbSchema}.toathuoc where MaKhamBenh = {MaKhamBenh}";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -51,7 +51,7 @@ namespace DAO
         }
         public void InsertPrescription(DTO_ToaThuoc Prescription)
         {
-            OracleCommand command = new OracleCommand("OT.INSERT_TT", _conn);
+            OracleCommand command = new OracleCommand($"{_dbSchema}.INSERT_TT", _conn);
             command.CommandType = CommandType.StoredProcedure;
 
             OracleParameter param1 = new OracleParameter("I_MADONTHUOC", OracleDbType.Varchar2);
