@@ -40,7 +40,7 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from {_dbSchema}.toathuoc where MaKhamBenh = {MaKhamBenh}";
+            command.CommandText = $"select * from {_dbSchema}.toathuoc where MaKhamBenh like '%{MaKhamBenh}%'";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);

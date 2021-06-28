@@ -35,7 +35,24 @@ namespace BUS
                 tmpObject.NgayLapDon = row["NGAYLAPDON"].ToString();
                 
                 tmpObject.TongTien = double.Parse(row["TONGTIEN"].ToString());
+                tmpObject.MaKhamBenh = row["MAKHAMBENH"].ToString();
+                result.Add(tmpObject);
+            }
+            return result;
+        }
+        public List<DTO_ToaThuoc> GetPrescriptionByMakhambenh(string MKB)
+        {
+            List<DTO_ToaThuoc> result = new List<DTO_ToaThuoc>();
+            DataTable data = DAO_ToaThuoc.Instance.GetPrescriptionByMaKhamBenh(MKB);
 
+            foreach (DataRow row in data.Rows)
+            {
+                DTO_ToaThuoc tmpObject = new DTO_ToaThuoc();
+                tmpObject.MaDonThuoc = row["MADONTHUOC"].ToString();
+                tmpObject.NgayLapDon = row["NGAYLAPDON"].ToString();
+
+                tmpObject.TongTien = double.Parse(row["TONGTIEN"].ToString());
+                tmpObject.MaKhamBenh = row["MAKHAMBENH"].ToString();
                 result.Add(tmpObject);
             }
             return result;

@@ -17,7 +17,7 @@
             </Grid>
             <Grid HorizontalAlignment="Left" Height="35" Margin="106,42,0,0" VerticalAlignment="Top" Width="458"/>
             <TextBlock HorizontalAlignment="Left" Height="22" Margin="194,49,0,0" TextWrapping="Wrap" Text="Mã phiếu khám: " VerticalAlignment="Top" Width="99"/>
-            <TextBox x:Name="MaPK" HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="abc123" VerticalAlignment="Top" Width="179"/>
+            <TextBox x:Name="MaPK" HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="179"/>
             <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="77" Height="33" 
                     Click="Button_Click"/>
             <DataGrid HorizontalAlignment="Left" Height="276" Margin="75,93,0,0" VerticalAlignment="Top" Width="645"

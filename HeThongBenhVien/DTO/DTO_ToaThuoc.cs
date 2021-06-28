@@ -11,5 +11,6 @@ namespace DTO
         public String MaDonThuoc { get; set; }
         public String NgayLapDon { get; set; }
         public double TongTien { get; set; }
+        public String MaKhamBenh { get; set; }
     }
 }

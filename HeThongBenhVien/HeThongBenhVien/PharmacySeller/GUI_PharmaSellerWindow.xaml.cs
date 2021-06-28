@@ -28,7 +28,7 @@ namespace HeThongBenhVien.PharmacySeller
         private List<DTO_ToaThuoc> PrescriptionList = null;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoadPrescriptions();
+            SearchPresciptions();
         }
         private void LoadPrescriptions()
         {
@@ -36,7 +36,12 @@ namespace HeThongBenhVien.PharmacySeller
             PrescriptionsDataGrid.AutoGenerateColumns = false;
             PrescriptionsDataGrid.ItemsSource = PrescriptionList;
         }
-
+        private void SearchPresciptions()
+        {
+            PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptionByMakhambenh((MaPK.Text).ToUpper());
+            PrescriptionsDataGrid.AutoGenerateColumns = false;
+            PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+        }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadPrescriptions();
