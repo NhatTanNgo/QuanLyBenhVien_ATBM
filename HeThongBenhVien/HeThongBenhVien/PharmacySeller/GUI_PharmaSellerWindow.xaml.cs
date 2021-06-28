@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,22 @@ namespace HeThongBenhVien.PharmacySeller
         public GUI_PharmaSellerWindow()
         {
             InitializeComponent();
+        }
+        private List<DTO_ToaThuoc> PrescriptionList = null;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoadPrescriptions();
+        }
+        private void LoadPrescriptions()
+        {
+            PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptions();
+            PrescriptionsDataGrid.AutoGenerateColumns = false;
+            PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadPrescriptions();
         }
     }
 }

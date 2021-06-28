@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeThongBenhVien.PharmacySeller"
         mc:Ignorable="d"
-        Title="GUI_PharmaSellerWindow" Height="450" Width="800">
+        Title="GUI_PharmaSellerWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
-        <Grid  Background="WhiteSmoke">
+        <Grid  Background="WhiteSmoke" Margin="0,0,-0.4,0">
             <Button Content="TRỞ VỀ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
             <Grid HorizontalAlignment="Left" Height="32" Margin="235,10,0,0" VerticalAlignment="Top" Width="352">
                 <TextBlock FontWeight="Bold" FontFamily="University" 
@@ -16,9 +17,25 @@
             </Grid>
             <Grid HorizontalAlignment="Left" Height="35" Margin="106,42,0,0" VerticalAlignment="Top" Width="458"/>
             <TextBlock HorizontalAlignment="Left" Height="22" Margin="194,49,0,0" TextWrapping="Wrap" Text="Mã phiếu khám: " VerticalAlignment="Top" Width="99"/>
-            <TextBox HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="abc123" VerticalAlignment="Top" Width="179"/>
-            <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="77" Height="33" />
-            <ScrollViewer HorizontalAlignment="Left" Height="284" Margin="56,78,0,0" VerticalAlignment="Top" Width="370" VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="MaPK" HorizontalAlignment="Left" Height="36" Margin="293,41,0,0" TextWrapping="Wrap" Text="abc123" VerticalAlignment="Top" Width="179"/>
+            <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="77" Height="33" 
+                    Click="Button_Click"/>
+            <DataGrid HorizontalAlignment="Left" Height="276" Margin="75,93,0,0" VerticalAlignment="Top" Width="645"
+                       x:Name="PrescriptionsDataGrid"
+                       ScrollViewer.CanContentScroll="True"
+                       ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.RowSpan="3">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã đơn thuốc"
+                                        Binding="{Binding MaDonThuoc, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Ngày lập đơn"
+                                        Binding="{Binding NgayLapDon, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="Tổng tiền"
+                                        Binding="{Binding TongTien, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Mã Khám Bệnh"
+                                        Binding="{Binding MaKhamBenh, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!--<ScrollViewer HorizontalAlignment="Left" Height="284" Margin="56,78,0,0" VerticalAlignment="Top" Width="370" VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <TextBlock FontFamily="Arial" Foreground="Black"
                            VerticalAlignment="Top" FontSize="20" Margin="5" HorizontalAlignment="Left"
@@ -42,7 +59,7 @@
                     Text="Tổng tiền:" Margin="487,367,0,0"/>
             <TextBox x:Name="MaBN_Copy1" FontFamily="Arial" Foreground="Black" FontWeight="Bold"
                     VerticalAlignment="Top" FontSize="20" Margin="0,362,29.6,0" 
-                    HorizontalAlignment="Right" Text="20 000 VNĐ"/>
+                    HorizontalAlignment="Right" Text="20 000 VNĐ"/>-->
 
         </Grid>
     </Grid>

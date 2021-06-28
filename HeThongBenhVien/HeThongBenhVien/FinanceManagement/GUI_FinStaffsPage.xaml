@@ -11,13 +11,18 @@
 
     <Grid>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="229*"/>
+                <RowDefinition Height="52*"/>
+                <RowDefinition Height="69*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Vertical"
-                    Grid.Column="0">
+                    Grid.Column="0" Grid.RowSpan="3">
                 <Button x:Name="RefreshButton"
                     Content="Refresh"
                     Click="RefreshButton_Click"
@@ -29,7 +34,7 @@
             <DataGrid Grid.Column="1"
                   x:Name="FinStaffsDataGrid"
                   ScrollViewer.CanContentScroll="True"
-                  ScrollViewer.VerticalScrollBarVisibility="Visible">
+                  ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.RowSpan="3">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Mã nhân viên"
                                         Binding="{Binding MaNhanVien, Mode=TwoWay}"/>
