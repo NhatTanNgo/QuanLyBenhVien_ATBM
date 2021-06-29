@@ -28,8 +28,16 @@ namespace PhanHe01.UserPages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ListUsers_DataGrid.ItemsSource = BUS_User.Instance.GetAllUsers();
-            ListRoles_DataGrid.ItemsSource = BUS_Role.Instance.GetAllRoles();
+            try
+            {
+                ListUsers_DataGrid.ItemsSource = BUS_User.Instance.GetAllUsers();
+                ListRoles_DataGrid.ItemsSource = BUS_Role.Instance.GetAllRoles();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

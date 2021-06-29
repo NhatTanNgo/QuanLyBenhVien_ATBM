@@ -58,11 +58,11 @@ namespace BUS
 
         }
 
-        public void GrantRoleToUser(String role, String username)
+        public void GrantRoleToUser(String role, String username, bool? grantOpt)
         {
             try
             {
-                DAO_Role.Instance.GrantRoleToUser(role, username);
+                DAO_Role.Instance.GrantRoleToUser(role, username, grantOpt);
             }
             catch (Exception ex)
             {

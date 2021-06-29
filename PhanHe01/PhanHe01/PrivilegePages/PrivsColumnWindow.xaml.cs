@@ -34,7 +34,16 @@ namespace PhanHe01.PrivilegePages
             this.username = username;
             InitializeComponent();
 
-            list = BUS_Privilege.Instance.GetPrivilegesAllColumns(username, privilegeOnTable.TableName);
+            try
+            {
+                list = BUS_Privilege.Instance.GetPrivilegesAllColumns(username, privilegeOnTable.TableName);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
+            
 
             if(list.Count == 0)
             {

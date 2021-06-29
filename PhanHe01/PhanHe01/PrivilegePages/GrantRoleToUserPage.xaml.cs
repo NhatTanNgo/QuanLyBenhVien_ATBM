@@ -27,11 +27,21 @@ namespace PhanHe01.PrivilegePages
             InitializeComponent();
         }
 
-        private List<DTO_Role> roleList = BUS_Role.Instance.GetAllRoles();
-        private List<DTO_User> userList = BUS_User.Instance.GetAllUsers();
+        private List<DTO_Role> roleList;
+        private List<DTO_User> userList;
         private List<ObjectToGrant> list = new List<ObjectToGrant>();
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                roleList = BUS_Role.Instance.GetAllRoles();
+                userList = BUS_User.Instance.GetAllUsers();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
             for(int i = 0; i < roleList.Count; i++)
             {
@@ -57,13 +67,14 @@ namespace PhanHe01.PrivilegePages
             String role = roleList[roleIndex].RoleName;
             int grantedIndex = RoleOrUsernameComboBox.SelectedIndex;
             String granted = list[grantedIndex].Name;
+            bool? grantOpt = grantOpt_checkbox.IsChecked;
             if(role.Equals("") || granted.Equals("") )
             {
                 return;
             }
             try
             {
-                BUS_Role.Instance.GrantRoleToUser(role, granted);
+                BUS_Role.Instance.GrantRoleToUser(role, granted, grantOpt);
             }
             catch(Exception ex)
             {
