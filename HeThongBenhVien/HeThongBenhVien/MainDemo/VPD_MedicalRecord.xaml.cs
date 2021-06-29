@@ -34,9 +34,15 @@ namespace HeThongBenhVien.MainDemo
 
         private void LoadMedicalReords()
         {
-            List<DTO_PhieuKhamBenh> medicalRecords = BUS_PhieuKhamBenh.Instance.GetMedicalRecords();
-
-            medicalRecord_grid.ItemsSource = medicalRecords;
+            try
+            {
+                List<DTO_PhieuKhamBenh> medicalRecords = BUS_PhieuKhamBenh.Instance.GetMedicalRecords();
+                medicalRecord_grid.ItemsSource = medicalRecords;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

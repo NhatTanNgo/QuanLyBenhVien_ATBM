@@ -37,7 +37,7 @@ namespace HeThongBenhVien.MainDemo
 
         private void seller_btn_Click(object sender, RoutedEventArgs e)
         {
-            if(sellerWindow == null)
+            if(sellerWindow == null || !sellerWindow.IsActive)
             {
                 sellerWindow = new PharmacySeller.GUI_PharmaSellerWindow();
             }
@@ -47,7 +47,7 @@ namespace HeThongBenhVien.MainDemo
 
         private void finManage_btn_Click(object sender, RoutedEventArgs e)
         {
-            if(finManageWindow == null)
+            if(finManageWindow == null || !finManageWindow.IsActive)
             {
                 finManageWindow = new FinanceManagement.GUI_FinManageWindow(username);
             }

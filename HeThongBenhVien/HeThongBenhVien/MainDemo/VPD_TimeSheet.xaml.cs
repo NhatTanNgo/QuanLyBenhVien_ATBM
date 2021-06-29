@@ -33,9 +33,15 @@ namespace HeThongBenhVien.MainDemo
 
         private void LoadTimeSheets()
         {
-            List<DTO_PhieuChamCong> timeSheets = BUS_PhieuChamCong.Instance.GetTimeSheets();
-
-            timeSheets_grid.ItemsSource = timeSheets;
+            try
+            {
+                List<DTO_PhieuChamCong> timeSheets = BUS_PhieuChamCong.Instance.GetTimeSheets();
+                timeSheets_grid.ItemsSource = timeSheets;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

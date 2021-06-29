@@ -39,14 +39,21 @@ namespace HeThongBenhVien.FinanceManagement
 
         private void LoadServiceInfor()
         {
-            List<DTO_DichVu> serviceInfor = BUS_DichVu.Instance.GetServiceInfor();
-            ServiceDataGrid.AutoGenerateColumns = false;
-            ServiceDataGrid.ItemsSource = serviceInfor;
+            try
+            {
+                List<DTO_DichVu> serviceInfor = BUS_DichVu.Instance.GetServiceInfor();
+                ServiceDataGrid.AutoGenerateColumns = false;
+                ServiceDataGrid.ItemsSource = serviceInfor;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void AddServiceButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void DelServiceButton_Click(object sender, RoutedEventArgs e)

@@ -32,19 +32,37 @@ namespace HeThongBenhVien.PharmacySeller
         }
         private void LoadPrescriptions()
         {
-            PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptions();
-            PrescriptionsDataGrid.AutoGenerateColumns = false;
-            PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+            try
+            {
+                PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptions();
+                PrescriptionsDataGrid.AutoGenerateColumns = false;
+                PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         private void SearchPresciptions()
         {
-            PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptionByMakhambenh((MaPK.Text).ToUpper());
-            PrescriptionsDataGrid.AutoGenerateColumns = false;
-            PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+            try
+            {
+                PrescriptionList = BUS_ToaThuoc.Instance.GetPrescriptionByMakhambenh((MaPK.Text).ToUpper());
+                PrescriptionsDataGrid.AutoGenerateColumns = false;
+                PrescriptionsDataGrid.ItemsSource = PrescriptionList;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadPrescriptions();
+        }
+        private void exit_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

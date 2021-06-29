@@ -9,7 +9,9 @@
         Loaded="Window_Loaded">
     <Grid>
         <Grid  Background="WhiteSmoke" Margin="0,0,-0.4,0">
-            <Button Content="TRỞ VỀ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            <Button Name="exit_button"
+                    Content="TRỞ VỀ" Click="exit_button_Click"
+                    HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
             <Grid HorizontalAlignment="Left" Height="32" Margin="235,10,0,0" VerticalAlignment="Top" Width="352">
                 <TextBlock FontWeight="Bold" FontFamily="University" 
                        VerticalAlignment="Center" 

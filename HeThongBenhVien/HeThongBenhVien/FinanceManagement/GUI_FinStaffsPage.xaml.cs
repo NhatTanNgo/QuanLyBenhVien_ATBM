@@ -36,9 +36,16 @@ namespace HeThongBenhVien.FinanceManagement
 
         private void LoadFinStaffs()
         {
-            finStaffList = BUS_NhanVien.Instance.GetFinanceEmployees();
-            FinStaffsDataGrid.AutoGenerateColumns = false;
-            FinStaffsDataGrid.ItemsSource = finStaffList;
+            try
+            {
+                finStaffList = BUS_NhanVien.Instance.GetFinanceEmployees();
+                FinStaffsDataGrid.AutoGenerateColumns = false;
+                FinStaffsDataGrid.ItemsSource = finStaffList;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

@@ -39,8 +39,15 @@ namespace HeThongBenhVien.MainDemo
 
         private void LoadEmployees()
         {
-            List<DTO_NhanVien> employeeList = BUS_NhanVien.Instance.GetEmployees();
-            EmployeeDataGrid.ItemsSource = employeeList;
+            try
+            {
+                List<DTO_NhanVien> employeeList = BUS_NhanVien.Instance.GetEmployees();
+                EmployeeDataGrid.ItemsSource = employeeList;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }
