@@ -14,3 +14,4 @@ drop table PHIEUYEUCAUDICHVU cascade CONSTRAINTS;
 drop table PHONGKHAM cascade CONSTRAINTS;
 drop table THUOC cascade CONSTRAINTS;
 drop table TOATHUOC cascade CONSTRAINTS;
+drop table QUANLY cascade CONSTRAINTS;
