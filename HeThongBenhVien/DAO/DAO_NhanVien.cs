@@ -27,8 +27,8 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select n.manhanvien, n.hoten, n.sdt, n.diachi, n.email, n.dob, n.luongcoban, n.phucap " +
-                                    $"from {_dbSchema}.nhanvien n where n.mabophan = 'BP005'";
+            command.CommandText = $"select manhanvien, hoten, sdt, diachi, email, dob, luongcoban, phucap " +
+                                    $"from {_dbSchema}.nhanvien where mabophan = 'BP005'";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);
@@ -42,8 +42,8 @@ namespace DAO
         {
             _conn.Open();
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"select n.manhanvien, n.hoten, n.sdt, n.diachi, n.email, n.dob, n.luongcoban, n.phucap, t.tenbophan " +
-                                    $"from {_dbSchema}.nhanvien n, ot.bophan t where t.mabophan = n.mabophan";
+            command.CommandText = $"select * " +
+                                    $"from {_dbSchema}.nhanvien";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);

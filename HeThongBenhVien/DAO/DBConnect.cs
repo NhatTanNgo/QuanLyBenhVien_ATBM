@@ -12,7 +12,7 @@ namespace DAO
         protected static OracleConnection _conn = null;
         //protected static OracleConnection _conn = new OracleConnection("Data Source=localhost:1521/xepdb1;Persist Security Info=True;User ID = OT; Password= minhlamv18");
         protected static String _username = null;
-        protected static String _dbSchema = "OT";
+        protected static String _dbSchema = "DBA_QLBV";
 
         //Data Source = IP:Port/Database name (SID)
         //UserID = username

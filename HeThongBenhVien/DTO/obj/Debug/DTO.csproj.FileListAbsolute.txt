@@ -4,3 +4,9 @@ D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DTO\obj\
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DTO\obj\Debug\DTO.dll
 D:\An toàn và bảo mật HTTT\CK\QuanLyBenhVien_ATBM\HeThongBenhVien\DTO\obj\Debug\DTO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\bin\Debug\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\bin\Debug\DTO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\obj\Debug\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DTO\obj\Debug\DTO.pdb

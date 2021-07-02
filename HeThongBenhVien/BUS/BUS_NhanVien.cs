@@ -75,7 +75,8 @@ namespace BUS
                 tmpObject.DOB = date.ToString("dd/MM/yyyy");
                 tmpObject.LuongCoBan = double.Parse(row["LUONGCOBAN"].ToString());
                 tmpObject.PhuCap = double.Parse(row["LUONGCOBAN"].ToString());
-                tmpObject.BoPhan = row["TENBOPHAN"].ToString();
+                tmpObject.MaBoPhan = row["MABOPHAN"].ToString();
+                tmpObject.ChiNhanh = row["CHINHANH"].ToString();
 
                 result.Add(tmpObject);
             }

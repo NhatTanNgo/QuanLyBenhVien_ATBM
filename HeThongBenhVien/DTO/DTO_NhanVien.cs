@@ -16,7 +16,8 @@ namespace DTO
         public String DOB { get; set; }
         public double LuongCoBan { get; set; }
         public double PhuCap { get; set; }
-        public String BoPhan { get; set; }
-      
+        public String MaBoPhan { get; set; }
+        public String ChiNhanh { get; set; }
+
     }
 }

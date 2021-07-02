@@ -1,0 +1,13 @@
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\DAO.deps.json
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\DAO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\DAO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\Oracle.DataAccess.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\bin\Debug\netstandard2.0\DTO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.csprojAssemblyReference.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.AssemblyInfoInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.AssemblyInfo.cs
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.csproj.CoreCompileInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.csproj.CopyComplete
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DAO\obj\Debug\netstandard2.0\DAO.pdb

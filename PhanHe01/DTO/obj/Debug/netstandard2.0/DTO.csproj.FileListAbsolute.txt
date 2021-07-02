@@ -1,0 +1,9 @@
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.deps.json
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\bin\Debug\netstandard2.0\DTO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.csprojAssemblyReference.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfoInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfo.cs
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.csproj.CoreCompileInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\DTO\obj\Debug\netstandard2.0\DTO.pdb

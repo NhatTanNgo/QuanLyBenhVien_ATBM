@@ -1,0 +1,15 @@
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\BUS.deps.json
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\BUS.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\BUS.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\DAO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\DTO.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\Oracle.DataAccess.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\DAO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\bin\Debug\netstandard2.0\DTO.pdb
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.csprojAssemblyReference.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.AssemblyInfoInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.AssemblyInfo.cs
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.csproj.CoreCompileInputs.cache
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.csproj.CopyComplete
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.dll
+D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\PhanHe01\BUS\obj\Debug\netstandard2.0\BUS.pdb
