@@ -32,6 +32,11 @@
                     Click="SeeRoleOfUserButton_Click"
                     Margin="0 5"
                     HorizontalAlignment="Stretch"/>
+            <Button x:Name="RevokeRoleOfUserButton" 
+                    Content="Thu hồi Role của User"
+                    Click="RevokeRoleOfUserButton_Click"
+                    Margin="0 5"
+                    HorizontalAlignment="Stretch"/>
             
         </StackPanel>
         <Frame Grid.Column="1" x:Name="SubFrame"

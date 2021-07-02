@@ -48,5 +48,11 @@ namespace PhanHe01
             PrivilegePages.SeeRolePage seeRolePage = new PrivilegePages.SeeRolePage();
             SubFrame.Navigate(seeRolePage);
         }
+
+        private void RevokeRoleOfUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrivilegePages.RevokeRolePage revokeRolePage = new PrivilegePages.RevokeRolePage();
+            SubFrame.Navigate(revokeRolePage);
+        }
     }
 }

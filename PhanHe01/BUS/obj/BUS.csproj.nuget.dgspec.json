@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj": {}
+    "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj": {}
   },
   "projects": {
-    "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj": {
+    "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj",
+        "projectUniqueName": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj",
         "projectName": "BUS",
-        "projectPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj",
-        "packagesPath": "C:\\Users\\NhatTan\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\obj\\",
+        "projectPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\BUS.csproj",
+        "packagesPath": "C:\\Users\\rongb\\.nuget\\packages\\",
+        "outputPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\BUS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NhatTan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rongb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj": {
-                "projectPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj"
+              "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj": {
+                "projectPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj"
               }
             }
           }
@@ -61,21 +65,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj": {
+    "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj",
+        "projectUniqueName": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\NhatTan\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\obj\\",
+        "projectPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\rongb\\.nuget\\packages\\",
+        "outputPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DAO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NhatTan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rongb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +97,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj"
+              "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj": {
+                "projectPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj"
               }
             }
           }
@@ -126,21 +134,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj": {
+    "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj",
+        "projectUniqueName": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\NhatTan\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\ATVBM\\Đồ án QLBV\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\obj\\",
+        "projectPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\rongb\\.nuget\\packages\\",
+        "outputPath": "F:\\Study\\An toan bao mat HTTT\\QuanLyBenhVien_ATBM\\PhanHe01\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NhatTan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rongb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -183,7 +195,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

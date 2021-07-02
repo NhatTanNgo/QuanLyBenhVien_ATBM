@@ -70,6 +70,9 @@
     <Compile Include="PrivilegePages\PrivsColumnWindow.xaml.cs">
       <DependentUpon>PrivsColumnWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PrivilegePages\RevokeRolePage.xaml.cs">
+      <DependentUpon>RevokeRolePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrivilegePages\SeeRolePage.xaml.cs">
       <DependentUpon>SeeRolePage.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PrivilegePages\PrivsColumnWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrivilegePages\RevokeRolePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

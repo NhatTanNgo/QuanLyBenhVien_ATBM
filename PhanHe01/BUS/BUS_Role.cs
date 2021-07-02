@@ -70,6 +70,18 @@ namespace BUS
             }
         }
 
+        public void RevokeRoleToUser(String role, String username)
+        {
+            try
+            {
+                DAO_Role.Instance.RevokeRoleFromUser(role, username);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void CreateRole(String rolename, String password)
         {
             try
