@@ -28,12 +28,13 @@
                     Margin="30 0 0 0"
                     Click="CheckButton_Click"/>
         </StackPanel>
-        <StackPanel Orientation="Vertical"
+        <DockPanel 
                     Grid.Row="1"
                     Margin="5"
                     ScrollViewer.CanContentScroll="True"
                     VerticalAlignment="Stretch">
-            <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"/>
+            <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"
+                       DockPanel.Dock="Top"/>
             <DataGrid x:Name="PrivilegeOnTable_DataGrid"
                     AutoGenerateColumns="False"
                     HorizontalAlignment="Stretch"
@@ -63,10 +64,11 @@
                 </DataGrid.Columns>
             </DataGrid>
            
-        </StackPanel>
-        <StackPanel Orientation="Vertical"
+        </DockPanel>
+        <DockPanel
                     Grid.Row="2">
-            <TextBlock Text="PHÂN QUYỀN THEO MỨC CỘT"/>
+            <TextBlock Text="PHÂN QUYỀN THEO MỨC CỘT"
+                       DockPanel.Dock="Top"/>
             <DataGrid x:Name="PrivilegeOnColumn_DataGrid"
                       AutoGenerateColumns="False"
                       MaxHeight="400"
@@ -87,7 +89,7 @@
                                         Binding="{Binding Grantor}"/>
                 </DataGrid.Columns>
             </DataGrid>
-        </StackPanel>
+        </DockPanel>
             
         
     </Grid>
