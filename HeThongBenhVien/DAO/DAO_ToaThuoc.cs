@@ -25,29 +25,45 @@ namespace DAO
         }
         public DataTable GetPrescriptions()
         {
-            _conn.Open();
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from {_dbSchema}.toathuoc";
-            command.Connection = _conn;
+            try
+            {
+                _conn.Open();
+                OracleCommand command = new OracleCommand();
+                command.CommandText = $"select * from {_dbSchema}.toathuoc";
+                command.Connection = _conn;
 
-            OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable dataTable = new DataTable(); //create a new table
-            adapter.Fill(dataTable);
-            _conn.Close();
-            return dataTable;
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                DataTable dataTable = new DataTable(); //create a new table
+                adapter.Fill(dataTable);
+                _conn.Close();
+                return dataTable;
+            }
+            catch(OracleException e)
+            {
+                _conn.Close();
+                throw e;
+            }
         }
         public DataTable GetPrescriptionByMaKhamBenh(string MaKhamBenh)
         {
-            _conn.Open();
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from {_dbSchema}.toathuoc where MaKhamBenh like '%{MaKhamBenh}%'";
-            command.Connection = _conn;
+            try
+            {
+                _conn.Open();
+                OracleCommand command = new OracleCommand();
+                command.CommandText = $"select * from {_dbSchema}.toathuoc where MaKhamBenh like '%{MaKhamBenh}%'";
+                command.Connection = _conn;
 
-            OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable dataTable = new DataTable(); //create a new table
-            adapter.Fill(dataTable);
-            _conn.Close();
-            return dataTable;
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                DataTable dataTable = new DataTable(); //create a new table
+                adapter.Fill(dataTable);
+                _conn.Close();
+                return dataTable;
+            }
+            catch(OracleException e)
+            {
+                _conn.Close();
+                throw e;
+            }
         }
         public void InsertPrescription(DTO_ToaThuoc Prescription)
         {

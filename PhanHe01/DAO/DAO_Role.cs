@@ -69,6 +69,32 @@ namespace DAO
            
         }
 
+        public void RevokeRoleFromUser(String role, String username)
+        {
+            OracleCommand command = new OracleCommand("REVOKE_ROLE", _conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            OracleParameter param1 = new OracleParameter("R_USERNAME", OracleDbType.Varchar2);
+            param1.Value = username;
+            OracleParameter param2 = new OracleParameter("R_ROLE", OracleDbType.Varchar2);
+            param2.Value = role;
+
+            command.Parameters.Add(param1);
+            command.Parameters.Add(param2);
+
+            try
+            {
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch (OracleException ex)
+            {
+                _conn.Close();
+                throw ex;
+            }
+        }
+
         public void CreateRole(String rolename, String password)
         {
             bool hasPassword = true;

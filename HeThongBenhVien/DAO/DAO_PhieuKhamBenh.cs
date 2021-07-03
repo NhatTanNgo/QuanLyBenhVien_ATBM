@@ -26,16 +26,24 @@ namespace DAO
 
         public DataTable GetMedicalRecords()
         {
-            _conn.Open();
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"select * from {_dbSchema}.phieukhambenh";
-            command.Connection = _conn;
+            try
+            {
+                _conn.Open();
+                OracleCommand command = new OracleCommand();
+                command.CommandText = $"select * from {_dbSchema}.phieukhambenh";
+                command.Connection = _conn;
 
-            OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable dataTable = new DataTable(); //create a new table
-            adapter.Fill(dataTable);
-            _conn.Close();
-            return dataTable;
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                DataTable dataTable = new DataTable(); //create a new table
+                adapter.Fill(dataTable);
+                _conn.Close();
+                return dataTable;
+            }
+            catch(OracleException e)
+            {
+                _conn.Close();
+                throw e;
+            }
         }
 
         public void InsertMedicalRecord(DTO_PhieuKhamBenh medicalRecord)
