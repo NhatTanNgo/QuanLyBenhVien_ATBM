@@ -36,14 +36,16 @@
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.RowSpan="3">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã hoá đơn"
+                                        Binding="{Binding MaHoaDon, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="Ngày lập hoá đơn"
+                                        Binding="{Binding NgayLapHoaDon, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Tổng tiền"
+                                        Binding="{Binding TongTien, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Mã khám bệnh"
+                                        Binding="{Binding MaKhamBenh, Mode=OneWay}"/>
                     <DataGridTextColumn Header="Mã nhân viên"
-                                        Binding="{Binding MaNhanVien, Mode=TwoWay}"/>
-                    <DataGridTextColumn Header="Họ tên"
-                                        Binding="{Binding HoTen, Mode=TwoWay}"/>
-                    <DataGridTextColumn Header="Email"
-                                        Binding="{Binding Email, Mode=TwoWay}"/>
-                    <DataGridTextColumn Header="SĐT"
-                                        Binding="{Binding SDT, Mode=OneWay}"/>
+                                        Binding="{Binding MaNhanVien, Mode=OneWay}"/>
                 </DataGrid.Columns>
 
             </DataGrid>
