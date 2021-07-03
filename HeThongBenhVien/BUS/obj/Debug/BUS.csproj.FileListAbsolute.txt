@@ -24,3 +24,16 @@ D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\BUS\obj\Debug\BUS.cspro
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\BUS\obj\Debug\BUS.dll
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\BUS\obj\Debug\BUS.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\BUS.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\BUS.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\DTO.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\DAO.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\DAO.dll.config
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\bin\Debug\DTO.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\obj\Debug\BUS.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\BUS\obj\Debug\BUS.pdb

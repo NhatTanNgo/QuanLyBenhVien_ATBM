@@ -18,3 +18,14 @@ D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DAO\obj\Debug\DAO.cspro
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DAO\obj\Debug\DAO.dll
 D:\Downloads\QuanLyBenhVien_ATBM-Lam-GUI\HeThongBenhVien\DAO\obj\Debug\DAO.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.dll.config
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DAO.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DTO.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\bin\Debug\DTO.pdb
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.dll
+D:\An toàn và bảo mật HTTT\CK\again\QuanLyBenhVien_ATBM\HeThongBenhVien\DAO\obj\Debug\DAO.pdb
