@@ -29,7 +29,7 @@
                     Grid.Column="0"
                     Style="{StaticResource ButtonPrimary}"
                     VerticalAlignment="Stretch"
-                    Content="Quản lý nhân viên tài vụ"
+                    Content="Quản lý hoá đơn"
                     Foreground="Black"
                     FontSize="15"
                     Click="ManageFinStaffButton_Click"

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO_DichVu.cs" />
+    <Compile Include="DAO_HoaDon.cs" />
     <Compile Include="DAO_NhanVien.cs" />
     <Compile Include="DAO_PhieuChamCong.cs" />
     <Compile Include="DAO_PhieuKhamBenh.cs" />

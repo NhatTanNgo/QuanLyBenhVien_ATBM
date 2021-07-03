@@ -27,7 +27,7 @@ namespace HeThongBenhVien.FinanceManagement
             InitializeComponent();
         }
 
-        private List<DTO_NhanVien> finStaffList = null;
+        private List<DTO_HoaDon> ReceiptsList = null;
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
@@ -38,9 +38,9 @@ namespace HeThongBenhVien.FinanceManagement
         {
             try
             {
-                finStaffList = BUS_NhanVien.Instance.GetFinanceEmployees();
+                ReceiptsList = BUS_HoaDon.Instance.GetReceipts();
                 FinStaffsDataGrid.AutoGenerateColumns = false;
-                FinStaffsDataGrid.ItemsSource = finStaffList;
+                FinStaffsDataGrid.ItemsSource = ReceiptsList;
             }
             catch (Exception e)
             {
