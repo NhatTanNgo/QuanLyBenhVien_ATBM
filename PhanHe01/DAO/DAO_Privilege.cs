@@ -25,7 +25,7 @@ namespace DAO
         public DataTable GetPrivilegeOnTable(String username)
         {
             OracleCommand command = new OracleCommand();
-            command.CommandText = $"SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = '{username}' AND TYPE = 'TABLE'";
+            command.CommandText = $"SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = '{username}' AND TYPE = 'TABLE' ORDER BY TABLE_NAME";
             command.Connection = _conn;
 
             OracleDataAdapter adapter = new OracleDataAdapter(command);

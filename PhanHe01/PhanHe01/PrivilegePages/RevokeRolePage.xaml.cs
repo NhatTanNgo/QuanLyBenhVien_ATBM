@@ -52,8 +52,17 @@ namespace PhanHe01.PrivilegePages
         {
 
             int roleIndex = RoleNameComboBox.SelectedIndex;
+
+            if(roleIndex < 0)
+            {
+                roleIndex = 0;
+            }
             String role = roleList[roleIndex].RoleName;
             int userIndex = UsernameComboBox.SelectedIndex;
+            if(userIndex < 0)
+            {
+                userIndex = 0;
+            }    
             String username = userList[userIndex].Username;
             if (role.Equals("") || username.Equals(""))
             {
