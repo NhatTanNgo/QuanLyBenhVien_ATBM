@@ -18,33 +18,33 @@ using System.Windows.Shapes;
 namespace HeThongBenhVien.MainDemo
 {
     /// <summary>
-    /// Interaction logic for DAC_ServiceView.xaml
+    /// Interaction logic for DAC_Service.xaml
     /// </summary>
-    public partial class DAC_ServiceView : Page
+    public partial class DAC_Service : Page
     {
-        public DAC_Service servicePage = null;
-        public DAC_Drugs drugsPage = null;
-        public DAC_ServiceView()
+        public DAC_Service()
         {
             InitializeComponent();
         }
-
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-            if (servicePage == null)
-            {
-                servicePage = new DAC_Service();
-            }
-            subFrame.Navigate(servicePage);
+            LoadServices();
         }
-
-        private void SelectDrugsButton_Click(object sender, RoutedEventArgs e)
+        private void LoadServices()
         {
-            if (drugsPage == null)
+            try
             {
-                drugsPage = new DAC_Drugs();
+                List<DTO_DichVu> Drugs = BUS_DichVu.Instance.GetServiceInfor();
+                services_grid.ItemsSource = Drugs;
             }
-            subFrame.Navigate(drugsPage);
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadServices();
         }
     }
 }

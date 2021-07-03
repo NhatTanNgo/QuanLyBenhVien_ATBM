@@ -18,37 +18,19 @@
             <StackPanel Orientation="Vertical"
                     Grid.Column="0">
                 <Button x:Name="RefreshButton"
-                    Content="Refresh"
+                    Content="Danh sách dịch vụ"
                     Click="RefreshButton_Click"
                     Margin="10 5"
                     HorizontalAlignment="Stretch"/>
 
-
+                <Button x:Name="SelectDrugsButton"
+                    Content="Danh sách thuốc"
+                    Click="SelectDrugsButton_Click"
+                    Margin="10 5"
+                    HorizontalAlignment="Stretch"/>
             </StackPanel>
-            <StackPanel Grid.Column="1"
-                        Orientation="Vertical">
-                <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
-                           Text="Xem danh sách các dịch vụ:"
-                           FontSize="20"/>
-
-                <DataGrid Grid.Column="1"
-                  x:Name="ServiceDataGrid"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  ScrollViewer.CanContentScroll="True"
-                  ScrollViewer.VerticalScrollBarVisibility="Visible">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã dịch vụ" IsReadOnly="True"
-                                        Binding="{Binding MaDichVu}"/>
-                        <DataGridTextColumn Header="Tên dịch vụ" IsReadOnly="True"
-                                        Binding="{Binding TenDichVu, Mode=TwoWay}"/>
-                        <DataGridTextColumn Header="Giá dịch vụ" IsReadOnly="True"
-                                        Binding="{Binding GiaTien, Mode=TwoWay}"/>
-                    </DataGrid.Columns>
-
-                </DataGrid>
-            </StackPanel>
-            
+            <Frame Grid.Column="1" x:Name="subFrame"
+               NavigationUIVisibility="Hidden"/>
 
         </Grid>
     </Grid>

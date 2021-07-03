@@ -91,6 +91,12 @@
     <Compile Include="FinanceStaff\GUI_FinStaffWindow.xaml.cs">
       <DependentUpon>GUI_FinStaffWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainDemo\DAC_Drugs.xaml.cs">
+      <DependentUpon>DAC_Drugs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\DAC_Service.xaml.cs">
+      <DependentUpon>DAC_Service.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainDemo\DAC_ServiceView.xaml.cs">
       <DependentUpon>DAC_ServiceView.xaml</DependentUpon>
     </Compile>
@@ -180,6 +186,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI_LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_Drugs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_Service.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

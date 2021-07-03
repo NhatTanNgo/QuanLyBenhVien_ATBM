@@ -45,6 +45,7 @@
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhieuChamCong.cs" />
     <Compile Include="BUS_PhieuKhamBenh.cs" />
+    <Compile Include="BUS_Thuoc.cs" />
     <Compile Include="BUS_ToaThuoc.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
