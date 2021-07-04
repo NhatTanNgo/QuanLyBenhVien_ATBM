@@ -29,7 +29,7 @@ namespace PhanHe01.PrivilegePages
         }
 
         private ObservableCollection<DTO_PrivilegeOnTable> privilegesOnTableList = null;
-        private List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns = new List<ObservableCollection<DTO_PrivilegeOnColumn>>();
+        private List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns = null;
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
@@ -86,6 +86,7 @@ namespace PhanHe01.PrivilegePages
                 MessageBox.Show("No privleges on columns detected!");
                 privsColumnWindow.Close();
             }
+            privilegeOnColumns = new List<ObservableCollection<DTO_PrivilegeOnColumn>>(); ;
 
         }
 

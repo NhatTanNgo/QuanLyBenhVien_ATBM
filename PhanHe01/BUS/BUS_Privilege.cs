@@ -219,28 +219,30 @@ namespace BUS
 
             ObservableCollection<DTO_PrivilegeOnColumn> temp = GetPrivilegeOnColumnUpdateInsert(username);
 
-            for(int i = 0; i < temp.Count; i++)
+            int len = result.Count;
+
+            for(int i = 0; i < len; i++)
             {
-                DTO_PrivilegeOnColumn objResult = temp[i];
-                bool flag = false;
-                for(int j = 0; j < result.Count; j++)
+                DTO_PrivilegeOnColumn objResult = result[i];
+                for(int j = 0; j < temp.Count; j++)
                 {
-                    DTO_PrivilegeOnColumn objTemp = result[j];
+                    DTO_PrivilegeOnColumn objTemp = temp[j];
                     if (objResult.TableName.Equals(objTemp.TableName) &&
                         objResult.ColumnName.Equals(objTemp.ColumnName))
                     {
-                        objResult.IsUpdate = objTemp.IsUpdate;
-                        objResult.IsUpdateGrantable = objTemp.IsUpdateGrantable;
-                        objResult.IsInsert = objTemp.IsInsert;
-                        objResult.IsInsertGrantable = objTemp.IsInsertGrantable;
-                        flag = true;
+                        objResult.IsUpdate = objTemp.IsUpdate? true: objResult.IsUpdate;
+                        objResult.IsUpdateGrantable = objTemp.IsUpdateGrantable? true: objResult.IsUpdateGrantable;
+                        objResult.IsInsert = objTemp.IsInsert? true: objResult.IsInsert;
+                        objResult.IsInsertGrantable = objTemp.IsInsertGrantable? true: objResult.IsInsertGrantable;
+                        temp.Remove(objTemp);
+                        j--;
                     }
                 }
-                if (!flag)
-                {
-                    result.Add(objResult);
-                }
             }
+            for(int i = 0; i < temp.Count; i++)
+            {
+                result.Add(temp[i]);
+            }    
 
             return result;
         }
@@ -319,6 +321,7 @@ namespace BUS
 
         public void ExecPrivilegeOnColumn(List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns, String username)
         {
+            RevokeAllPrivilegesColumn(privilegeOnColumns, username);
             for(int i =0; i < privilegeOnColumns.Count; i++)
             {
                 for(int j = 0; j < privilegeOnColumns[i].Count; j++)
@@ -326,29 +329,15 @@ namespace BUS
                     DTO_PrivilegeOnColumn privilege = privilegeOnColumns[i][j];
                     if(privilege.IsUpdate)
                     {
-                       
-                            DAO_Privilege.Instance.GrantPrivilegeUpdateOnColumn
-                               (username, privilege.TableName, privilege.ColumnName, privilege.IsUpdateGrantable);
-                        
-                       
+                        DAO_Privilege.Instance.GrantPrivilegeUpdateOnColumn
+                           (username, privilege.TableName, privilege.ColumnName, privilege.IsUpdateGrantable);
                     }
-                    
-                    
-                }
-
-
-                for (int j = 0; j < privilegeOnColumns[i].Count; j++)
-                {
-                    DTO_PrivilegeOnColumn privilege = privilegeOnColumns[i][j];
-                    if(privilege.IsSelect)
+                    if (privilege.IsSelect)
                     {
-                        
-                            DAO_Privilege.Instance.GrantPrivilegeSelectOnColumn
-                               (username, privilege.TableName, privilege.ColumnName, privilege.IsSelectGrantable);
-                        
-                        
+                        DAO_Privilege.Instance.GrantPrivilegeSelectOnColumn
+                           (username, privilege.TableName, privilege.ColumnName, privilege.IsSelectGrantable);
                     }
-                   
+
                 }
             }
         }
@@ -360,6 +349,20 @@ namespace BUS
             {
                 DAO_Privilege.Instance.RevokeAllPrivilegesOnTable(username, row["TABLE_NAME"].ToString());
             }
+        }
+
+        public void RevokeAllPrivilegesColumn(List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns, String username)
+        {
+            for(int i = 0; i < privilegeOnColumns.Count; i++)
+            {
+                for(int j = 0; j < privilegeOnColumns[i].Count; j++)
+                {
+                    DTO_PrivilegeOnColumn privilege = privilegeOnColumns[i][j];
+                    DAO_Privilege.Instance.RevokePrivilegeUpdateOnColumn(username, privilege.TableName, privilege.ColumnName);
+
+                    DAO_Privilege.Instance.RevokePrivilegeSelectOnColumn(username, privilege.TableName, privilege.ColumnName);
+                }    
+            }    
         }
     }
 }

@@ -111,14 +111,38 @@ namespace DAO
             _conn.Close();
         }
 
-        public void RevokePrivilegesSelectOnColumn(String username, String table, String column)
+        public void RevokePrivilegeSelectOnColumn(String username, String table, String column)
         {
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"REVOKE SELECT ON {table + "_" + column + "_" + username + "_view"} FROM {username}";
-            command.Connection = _conn;
-            _conn.Open();
-            command.ExecuteNonQuery();
-            _conn.Close();
+            try
+            {
+                OracleCommand command = new OracleCommand();
+                command.CommandText = $"REVOKE SELECT ON {table + "_" + column + "_" + username + "_view"} FROM {username}";
+                command.Connection = _conn;
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch(OracleException e)
+            {
+                _conn.Close();
+            }
+        }
+
+        public void RevokePrivilegeUpdateOnColumn(String username, String table, String column)
+        {
+            try
+            {
+                OracleCommand command = new OracleCommand();
+                command.CommandText = $"REVOKE UPDATE ON {table} FROM {username}";
+                command.Connection = _conn;
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch (OracleException e)
+            {
+                _conn.Close();
+            }
         }
 
         public void GrantPrivilegeSelectOnColumn(String username, String table, String column, bool grantable)
@@ -128,9 +152,22 @@ namespace DAO
             {
                 grantableStr = "Y";
             }
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"BEGIN GRANT_SELECT_ON_COLUMN('{table}', '{username}', '{column}', '{grantableStr}'); END;";
-            command.Connection = _conn;
+            OracleCommand command = new OracleCommand("GRANT_SELECT_ON_COLUMN", _conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            OracleParameter param1 = new OracleParameter("Table_name", OracleDbType.Varchar2);
+            param1.Value = table;
+            OracleParameter param2 = new OracleParameter("user_name", OracleDbType.Varchar2);
+            param2.Value = username;
+            OracleParameter param3 = new OracleParameter("column_list", OracleDbType.Varchar2);
+            param3.Value = column;
+            OracleParameter param4 = new OracleParameter("grant_opt", OracleDbType.Char);
+            param4.Value = grantableStr;
+
+            command.Parameters.Add(param1);
+            command.Parameters.Add(param2);
+            command.Parameters.Add(param3);
+            command.Parameters.Add(param4);
             _conn.Open();
             command.ExecuteNonQuery();
             _conn.Close();
