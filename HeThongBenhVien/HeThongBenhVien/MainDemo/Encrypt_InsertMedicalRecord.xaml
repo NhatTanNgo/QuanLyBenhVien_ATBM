@@ -1,0 +1,86 @@
+﻿<Page x:Class="HeThongBenhVien.MainDemo.Encrypt_InsertMedicalRecord"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HeThongBenhVien.MainDemo"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1024"
+      Title="Encrypt_InsertMedicalRecord">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Left"
+                        Width="700">
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="10">
+                    <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
+                               Text="Nhập mã phiếu khám bệnh: "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtbox_medicalRecordID"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Stretch"
+                             Width="500"
+                             Height="40"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="10">
+                    <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
+                               Text="Nhập mã bệnh nhân: "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtbox_patientID"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Stretch"
+                              Width="500"
+                             Height="40"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="10">
+                    <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
+                               Text="Nhập triệu chứng: "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtbox_symptompsID"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Stretch"
+                              Width="500"
+                             Height="40"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="10">
+                    <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
+                               Text="Nhập kết quả chẩn đoán: "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtbox_diagnoseID"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Stretch"
+                              Width="500"
+                             Height="40"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="10">
+                    <TextBlock Style="{StaticResource TextBlockDefaultPrimary}"
+                               Text="Nhập mã bác sĩ: "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtbox_doctorID"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Stretch"
+                              Width="500"
+                             Height="40"/>
+                </DockPanel>
+            </StackPanel>
+            <Button x:Name="InsertButton"
+                    Content="THÊM"
+                    Click="InsertButton_Click"
+                    VerticalAlignment="Center"
+                    Margin="30 0 0 0"/>
+        </StackPanel>
+    </Grid>
+</Page>

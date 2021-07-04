@@ -6,7 +6,85 @@
         xmlns:local="clr-namespace:HeThongBenhVien.Doctor"
         mc:Ignorable="d"
         Title="GUI_DoctorWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="MenuTab"
+              Margin="20 0 0 0"
+              Grid.Row="0"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="MedicalRecord"
+                    Grid.Column="0"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Top"
+                    Content="Bệnh án"
+                    Foreground="Black"
+                    FontSize="15"
+                    Background="Transparent" Margin="0,0,0.2,0"
+                    />
+
+            <Button x:Name="Prescription"
+                    Grid.Column="1"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="Toa thuốc"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Margin="20 0 0 0"/>
+
+            <Button x:Name="Services"
+                    Grid.Column="2"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="Dịch vụ"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Margin="20 0 0 0"/>
+            <Button x:Name="AllRecords"
+                    Grid.Column="2"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="Tất cả bệnh án"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Margin="135.6,0,-117.6,2"/>
+        </Grid>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+            <Ellipse Width="40" Height="40"
+                     Margin="0 0 15 0">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="AvatarIcon" 
+                        ImageSource="/avatar.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <TextBlock x:Name="LoginUsernameTextBlock"
+                       VerticalAlignment="Center"
+                       Text="Login Username"
+                       FontSize="15"
+                       Margin="0 0 20 0"/>
+
+        </StackPanel>
+
+        <Frame Grid.Row="1"
+               Name="MainFrame"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

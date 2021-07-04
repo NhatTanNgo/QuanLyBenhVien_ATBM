@@ -61,11 +61,171 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Doctor\GUI_DoctorMedicalRecord.xaml.cs">
+      <DependentUpon>GUI_DoctorMedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorPrescription.xaml.cs">
+      <DependentUpon>GUI_DoctorPrescription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorServices.xaml.cs">
+      <DependentUpon>GUI_DoctorServices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
+      <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertiseManagement\GUI_ExpertisePage.xaml.cs">
+      <DependentUpon>GUI_ExpertisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertiseManagement\GUI_ExpManageWindow.xaml.cs">
+      <DependentUpon>GUI_ExpManageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagement\GUI_FinManageWindow.xaml.cs">
+      <DependentUpon>GUI_FinManageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagement\GUI_FinStaffsPage.xaml.cs">
+      <DependentUpon>GUI_FinStaffsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagement\GUI_ServicePage.xaml.cs">
+      <DependentUpon>GUI_ServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceStaff\GUI_FinStaffWindow.xaml.cs">
+      <DependentUpon>GUI_FinStaffWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\DAC_Drugs.xaml.cs">
+      <DependentUpon>DAC_Drugs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\DAC_Service.xaml.cs">
+      <DependentUpon>DAC_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\DAC_ServiceView.xaml.cs">
+      <DependentUpon>DAC_ServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\Encrypt_InsertMedicalRecord.xaml.cs">
+      <DependentUpon>Encrypt_InsertMedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\Encrypt_View.xaml.cs">
+      <DependentUpon>Encrypt_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\OLS_View.xaml.cs">
+      <DependentUpon>OLS_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\RBAC_View.xaml.cs">
+      <DependentUpon>RBAC_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\VPD_MedicalRecord.xaml.cs">
+      <DependentUpon>VPD_MedicalRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\VPD_TimeSheet.xaml.cs">
+      <DependentUpon>VPD_TimeSheet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainDemo\VPD_View.xaml.cs">
+      <DependentUpon>VPD_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacySeller\GUI_PharmaSellerWindow.xaml.cs">
+      <DependentUpon>GUI_PharmaSellerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_AddProfile.xaml.cs">
+      <DependentUpon>GUI_AddProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_ManageProfile.xaml.cs">
+      <DependentUpon>GUI_ManageProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\GUI_ReceptionWindow.xaml.cs">
+      <DependentUpon>GUI_ReceptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManagement\GUI_HumanPage.xaml.cs">
+      <DependentUpon>GUI_HumanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManagement\GUI_ResManageWindow.xaml.cs">
+      <DependentUpon>GUI_ResManageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManagement\GUI_RoomPage.xaml.cs">
+      <DependentUpon>GUI_RoomPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManagement\GUI_SchedulePage.xaml.cs">
+      <DependentUpon>GUI_SchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Doctor\GUI_DoctorMedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Doctor\GUI_DoctorPrescription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Doctor\GUI_DoctorServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Doctor\GUI_DoctorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ExpertiseManagement\GUI_ExpertisePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpertiseManagement\GUI_ExpManageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinanceManagement\GUI_FinManageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinanceManagement\GUI_FinStaffsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinanceManagement\GUI_ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinanceStaff\GUI_FinStaffWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI_LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_Drugs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_Service.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\DAC_ServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\Encrypt_InsertMedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\Encrypt_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\OLS_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\RBAC_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_MedicalRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_TimeSheet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainDemo\VPD_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,9 +237,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Doctor\GUI_DoctorWindow.xaml.cs">
-      <DependentUpon>GUI_DoctorWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="GUI_LoginWindow.xaml.cs">
       <DependentUpon>GUI_LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -87,6 +244,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PharmacySeller\GUI_PharmaSellerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reception\GUI_AddProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reception\GUI_ManageProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reception\GUI_ReceptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceManagement\GUI_HumanPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceManagement\GUI_ResManageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceManagement\GUI_RoomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceManagement\GUI_SchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -126,8 +315,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reception\" />
-    <Folder Include="ResourceManagement\" />
+    <Folder Include="Accountant\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

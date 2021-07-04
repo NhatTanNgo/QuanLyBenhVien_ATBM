@@ -5,28 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeThongBenhVien"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Loaded="Window_Loaded">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        Title="MainWindow" Height="700" Width="1024"
+        Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="btn_left"
-                Grid.Column="0" Grid.Row="0" 
-                Content="Click vô ik"
-                Click="btn_left_Click"/>
-        <Button x:Name="btn_right" Grid.Column="1" Grid.Row="0" 
-                Content="Click cái này ik"
-                Click="btn_right_Click"
-                Visibility="Hidden"/>
-        <TextBlock x:Name="txt_username"
-                   Grid.Column="1" Grid.Row="1" 
-                   Text="THIS IS USERNAME: "/>
+        <Grid x:Name="MenuTab"
+              Margin="20 0 0 0"
+              Grid.Row="0"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="DACButton"
+                    Grid.Column="0"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="DAC"
+                    Foreground="Black"
+                    FontSize="15"
+                    Click="DACButton_Click"
+                    Background="Transparent"
+                    />
+
+            <Button x:Name="RBACButton"
+                    Grid.Column="1"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="RBAC"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Click="RBACButton_Click"
+                    Margin="20 0 0 0"/>
+
+            <Button x:Name="VPDButton"
+                    Grid.Column="2"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="VPD"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Click="VPDButton_Click"
+                    Margin="20 0 0 0"/>
+
+            <Button x:Name="EncrytionButton"
+                    Grid.Column="3"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="Encryption"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Click="EncryptionButton_Click"
+                    Margin="20 0 0 0"/>
+
+            <Button x:Name="OLSButton"
+                    Grid.Column="4"
+                    Style="{StaticResource ButtonPrimary}"
+                    VerticalAlignment="Stretch"
+                    Content="OLS"
+                    Foreground="Black"
+                    FontSize= "15"
+                    Background="Transparent"
+                    Click="OLSButton_Click"
+                    Margin="20 0 0 0"/>
+        </Grid>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+            <Ellipse Width="40" Height="40"
+                     Margin="0 0 15 0">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="AvatarIcon" 
+                        ImageSource="/avatar.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <TextBlock x:Name="LoginUsernameTextBlock"
+                       VerticalAlignment="Center"
+                       Text="Login Username"
+                       FontSize="15"
+                       Margin="0 0 20 0"/>
+
+        </StackPanel>
+
+        <Frame Grid.Row="1"
+               x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

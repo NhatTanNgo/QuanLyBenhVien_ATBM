@@ -1,4 +1,4 @@
-﻿using Oracle.DataAccess.Client;
+﻿using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -36,12 +36,25 @@ namespace DAO
             return dataTable;
         }
 
-        public void GrantRoleToUser(String role, String username)
+        public void GrantRoleToUser(String role, String username, bool? grantOpt)
         {
-            OracleCommand command = new OracleCommand();
-            command.CommandText = $"GRANT {role} TO {username}";
-            command.Connection = _conn;
+            //OracleCommand command = new OracleCommand();
+            //command.CommandText = $"GRANT {role} TO {username}";
+            //command.Connection = _conn;
 
+            OracleCommand command = new OracleCommand("GRANT_ROLE", _conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            OracleParameter param1 = new OracleParameter("USERNAME", OracleDbType.Varchar2);
+            param1.Value = username;
+            OracleParameter param2 = new OracleParameter("GRANT_ROLE", OracleDbType.Varchar2);
+            param2.Value = role;
+            OracleParameter param3 = new OracleParameter("GRANT_OPTION", OracleDbType.Int32);
+            param3.Value = (bool)grantOpt ? 1 : 0;
+
+            command.Parameters.Add(param1);
+            command.Parameters.Add(param2);
+            command.Parameters.Add(param3);
             try
             {
                 _conn.Open();
@@ -54,6 +67,32 @@ namespace DAO
                 throw new Exception(ex.Message);
             }
            
+        }
+
+        public void RevokeRoleFromUser(String role, String username)
+        {
+            OracleCommand command = new OracleCommand("REVOKE_ROLE", _conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            OracleParameter param1 = new OracleParameter("R_USERNAME", OracleDbType.Varchar2);
+            param1.Value = username;
+            OracleParameter param2 = new OracleParameter("R_ROLE", OracleDbType.Varchar2);
+            param2.Value = role;
+
+            command.Parameters.Add(param1);
+            command.Parameters.Add(param2);
+
+            try
+            {
+                _conn.Open();
+                command.ExecuteNonQuery();
+                _conn.Close();
+            }
+            catch (OracleException ex)
+            {
+                _conn.Close();
+                throw ex;
+            }
         }
 
         public void CreateRole(String rolename, String password)

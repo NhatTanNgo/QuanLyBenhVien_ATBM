@@ -1,6 +1,6 @@
 ﻿using System;
 using DTO;
-using Oracle.DataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 using Oracle.DataAccess.Types;
 namespace DAO
 {

@@ -33,15 +33,15 @@
                     Margin="30 0 30 0"
                     HorizontalAlignment="Right"
                     Click="PrivilegeColumnButton_Click"/>
-        <StackPanel x:Name="PrivilegeTableStackPanel"
-                    Orientation="Vertical"
+        <DockPanel x:Name="PrivilegeTableStackPanel"
                     Grid.Row="1"
                     Margin="5"
                     Visibility="Hidden"
                     ScrollViewer.CanContentScroll="True"
                     VerticalAlignment="Stretch">
             <TextBlock Text="PHÂN QUYỀN THEO MỨC BẢNG"
-                       Height="20"/>
+                       Height="20"
+                       DockPanel.Dock="Top"/>
             <DataGrid x:Name="PrivilegeOnTable_DataGrid"
                     AutoGenerateColumns="False"
                     HorizontalAlignment="Stretch"
@@ -80,7 +80,7 @@
                 </DataGrid.Columns>
             </DataGrid>
             
-        </StackPanel>
+        </DockPanel>
         <Button x:Name="ConfirmButton"
                     Content="Xác nhận"
                     Grid.Row="3"

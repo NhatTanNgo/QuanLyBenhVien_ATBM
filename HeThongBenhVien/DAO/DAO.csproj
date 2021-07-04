@@ -44,12 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO_DichVu.cs" />
+    <Compile Include="DAO_HoaDon.cs" />
+    <Compile Include="DAO_NhanVien.cs" />
+    <Compile Include="DAO_PhieuChamCong.cs" />
+    <Compile Include="DAO_PhieuKhamBenh.cs" />
+    <Compile Include="DAO_Thuoc.cs" />
+    <Compile Include="DAO_ToaThuoc.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{bea5f062-edb3-490f-bfbd-367c01b0e2eb}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

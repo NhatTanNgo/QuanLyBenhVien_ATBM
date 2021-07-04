@@ -13,9 +13,11 @@ namespace DTO
         public String SDT { get; set; }
         public String DiaChi { get; set; }
         public String Email { get; set; }
+        public String DOB { get; set; }
         public double LuongCoBan { get; set; }
         public double PhuCap { get; set; }
-        public String BoPhan { get; set; }
-      
+        public String MaBoPhan { get; set; }
+        public String ChiNhanh { get; set; }
+
     }
 }

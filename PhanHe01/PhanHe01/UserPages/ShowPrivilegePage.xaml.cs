@@ -31,14 +31,22 @@ namespace PhanHe01.UserPages
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
             String username = UsernameTextBox.Text;
+            ObservableCollection<DTO_PrivilegeOnTable> privilegeOnTables;
+            ObservableCollection<DTO_PrivilegeOnColumn> privilegeOnColumns;
+            ObservableCollection<DTO_PrivilegeOnColumn> tmp;
 
-            ObservableCollection<DTO_PrivilegeOnTable> privilegeOnTables = 
-                BUS_Privilege.Instance.GetPrivilegesOnTable(username);
-            ObservableCollection<DTO_PrivilegeOnColumn> privilegeOnColumns =
-                BUS_Privilege.Instance.GetPrivilegesOnColumnSelect(username);
-
-            ObservableCollection<DTO_PrivilegeOnColumn> tmp =
-                BUS_Privilege.Instance.GetPrivilegeOnColumnUpdateInsert(username);
+            try
+            {
+                privilegeOnTables = BUS_Privilege.Instance.GetPrivilegesOnTable(username);
+                privilegeOnColumns = BUS_Privilege.Instance.GetPrivilegesOnColumnSelect(username);
+                tmp = BUS_Privilege.Instance.GetPrivilegeOnColumnUpdateInsert(username);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+          
             
             for(int i =0;i <tmp.Count; i++)
             {

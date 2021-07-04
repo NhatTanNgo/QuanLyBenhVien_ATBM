@@ -1,0 +1,34 @@
+﻿<Page x:Class="HeThongBenhVien.MainDemo.VPD_TimeSheet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HeThongBenhVien.MainDemo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VPD_TimeSheet"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Vertical" 
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Xem phiếu chấm công"
+                       FontSize="20"
+                       Margin="10"
+                       Foreground="Blue"/>
+            <Button x:Name="RefreshButton"
+                    Content="Refresh"
+                    Click="RefreshButton_Click"
+                    Margin="10 5"
+                    HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <DataGrid x:Name="timeSheets_grid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="True"/>
+    </Grid>
+</Page>

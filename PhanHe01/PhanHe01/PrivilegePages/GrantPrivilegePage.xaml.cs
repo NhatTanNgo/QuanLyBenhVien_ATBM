@@ -29,29 +29,44 @@ namespace PhanHe01.PrivilegePages
         }
 
         private ObservableCollection<DTO_PrivilegeOnTable> privilegesOnTableList = null;
-        private List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns = new List<ObservableCollection<DTO_PrivilegeOnColumn>>();
+        private List<ObservableCollection<DTO_PrivilegeOnColumn>> privilegeOnColumns = null;
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
-            bool checkExistUser = BUS_User.Instance.CheckUser(UsernameTextBox.Text);
-            if(!checkExistUser)
+            try
             {
-                bool checkExistRole = BUS_Role.Instance.CheckRole(UsernameTextBox.Text);
-                if(!checkExistRole)
+                bool checkExistUser = BUS_User.Instance.CheckUser(UsernameTextBox.Text);
+                if (!checkExistUser)
                 {
-                    MessageBox.Show("KHÔNG TÌM THẤY USER/ROLE NÀY!", "Oops");
-                    return;
+                    bool checkExistRole = BUS_Role.Instance.CheckRole(UsernameTextBox.Text);
+                    if (!checkExistRole)
+                    {
+                        MessageBox.Show("KHÔNG TÌM THẤY USER/ROLE NÀY!", "Oops");
+                        return;
+                    }
                 }
+                PrivilegeTableStackPanel.Visibility = Visibility;
+                privilegesOnTableList = BUS_Privilege.Instance.GetPrivilegesAllTables(UsernameTextBox.Text);
+                PrivilegeOnTable_DataGrid.ItemsSource = privilegesOnTableList;
             }
-            PrivilegeTableStackPanel.Visibility = Visibility;
-            privilegesOnTableList = BUS_Privilege.Instance.GetPrivilegesAllTables(UsernameTextBox.Text);
-            PrivilegeOnTable_DataGrid.ItemsSource = privilegesOnTableList;
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, UsernameTextBox.Text);
-            BUS_Privilege.Instance.ExecPrivilegeOnColumn(privilegeOnColumns, UsernameTextBox.Text);
+            try
+            {
+                BUS_Privilege.Instance.ExecPrivilegeOnTable(privilegesOnTableList, UsernameTextBox.Text);
+                BUS_Privilege.Instance.ExecPrivilegeOnColumn(privilegeOnColumns, UsernameTextBox.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PrivilegeColumnButton_Click(object sender, RoutedEventArgs e)
@@ -71,6 +86,7 @@ namespace PhanHe01.PrivilegePages
                 MessageBox.Show("No privleges on columns detected!");
                 privsColumnWindow.Close();
             }
+            privilegeOnColumns = new List<ObservableCollection<DTO_PrivilegeOnColumn>>(); ;
 
         }
 

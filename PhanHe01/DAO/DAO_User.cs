@@ -1,5 +1,5 @@
 ﻿using DTO;
-using Oracle.DataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -31,6 +31,10 @@ namespace DAO
             try
             {
                 _conn.Open();
+                command.ExecuteNonQuery();
+                command.CommandText = $"GRANT CONNECT TO {username}";
+                command.ExecuteNonQuery();
+                command.CommandText = $"COMMIT";
                 command.ExecuteNonQuery();
                 _conn.Close();
             }

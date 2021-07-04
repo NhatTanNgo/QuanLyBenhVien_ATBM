@@ -29,26 +29,34 @@ namespace PhanHe01.PrivilegePages
 
         public PrivsColumnWindow(GrantPrivilegePage page, DTO_PrivilegeOnTable privsTable, String username)
         {
+            InitializeComponent();
             this.privilegeOnTable = privsTable;
             this.page = page;
             this.username = username;
-            InitializeComponent();
 
-            list = BUS_Privilege.Instance.GetPrivilegesAllColumns(username, privilegeOnTable.TableName);
+            try
+            {
+                list = BUS_Privilege.Instance.GetPrivilegesAllColumns(username, privilegeOnTable.TableName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
-            if(list.Count == 0)
+
+            if (list.Count == 0)
             {
                 page.OpenSubWindow = false;
                 return;
             }
             page.OpenSubWindow = true;
             PrivSColumnDataGrid.ItemsSource = list;
-
         } 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+           
         }
 
        
